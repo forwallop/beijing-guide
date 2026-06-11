@@ -1,35 +1,35 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>北京·带外国朋友玩手机地图</title>
+  <title>Beijing Travel Map for Visitors</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="styles.css?v=bjv7">
+  <link rel="stylesheet" href="styles.css?v=bjv8">
 </head>
 <body data-page="overview">
   <main class="shell">
-    <aside aria-label="玩法列表">
+    <aside aria-label="Place list">
       <header class="overview-header">
-        <h1 data-guide-title>手机旅行地图</h1>
-        <p class="sub" data-guide-subtitle>从住地出发；主列表按项目类型组织，先看想做什么，再看推荐去哪个商家或地点。</p>
+        <h1 data-guide-title>Mobile Travel Map</h1>
+        <p class="sub" data-guide-subtitle>Start from home base; pick what you want to do, then see where to go.</p>
       </header>
 
-      <section id="placeList" class="list" aria-label="玩法列表"></section>
+      <section id="placeList" class="list" aria-label="Place list"></section>
     </aside>
 
-    <section class="map-wrap" aria-label="行程地图">
+    <section class="map-wrap" aria-label="Trip map">
       <div id="map"></div>
-      <div class="map-tools" aria-label="地图工具">
-        <button id="locateButton" class="map-button primary" type="button">定位我</button>
-        <button id="fitButton" class="map-button" type="button">看全部</button>
-        <div id="locationStatus" class="location-status">点“定位我”显示当前位置。</div>
+      <div class="map-tools" aria-label="Map tools">
+        <button id="locateButton" class="map-button primary" type="button">Locate Me</button>
+        <button id="fitButton" class="map-button" type="button">Show All</button>
+        <div id="locationStatus" class="location-status">Tap “Locate Me” to show your position.</div>
       </div>
     </section>
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="guide-data.js?v=bjv7"></script>
-  <script src="travel-map.js?v=bjv7"></script>
+  <script src="guide-data.js?v=bjv8"></script>
+  <script src="travel-map.js?v=bjv8"></script>
 </body>
 </html>

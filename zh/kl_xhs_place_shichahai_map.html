@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shichahai · Yandai Lane · Drum Tower 什刹海·烟袋斜街·鼓楼 · Site Map</title>
+  <title>什刹海·烟袋斜街·鼓楼·内部地图</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css?v=bjv8">
 </head>
@@ -12,29 +12,29 @@
     <div class="topbar-inner">
       <div class="brand">
         <span class="eyebrow" data-category-title></span>
-        <h1 data-place-title>Site Map</h1>
+        <h1 data-place-title>内部地图</h1>
       </div>
-      <nav class="nav-actions" aria-label="Page navigation">
-        <a class="button" href="index.html">Overview Map</a>
-        <a class="button primary" data-detail-link href="#">Visit Plan</a>
+      <nav class="nav-actions" aria-label="页面导航">
+        <a class="button" href="index.html">总览地图</a>
+        <a class="button primary" data-detail-link href="#">玩法顺序</a>
       </nav>
     </div>
   </header>
 
   <main class="map-shell">
-    <aside class="drawer" aria-label="Internal steps">
+    <aside class="drawer" aria-label="内部步骤">
       <div class="drawer-head">
         <p class="summary" data-place-summary></p>
       </div>
-      <section id="stepCards" class="map-list" aria-label="Site map steps"></section>
+      <section id="stepCards" class="map-list" aria-label="内部地图步骤"></section>
     </aside>
 
-    <section class="map-panel" aria-label="Site map">
+    <section class="map-panel" aria-label="内部地图">
       <div id="detailMap"></div>
-      <div class="map-tools" aria-label="Map tools">
-        <button id="locateButton" class="map-button primary" type="button">Locate Me</button>
-        <button id="fitButton" class="map-button" type="button">Show All</button>
-        <div id="locationStatus" class="location-status">Tap “Locate Me” to show your position.</div>
+      <div class="map-tools" aria-label="地图工具">
+        <button id="locateButton" class="map-button primary" type="button">定位我</button>
+        <button id="fitButton" class="map-button" type="button">看全部</button>
+        <div id="locationStatus" class="location-status">点“定位我”显示当前位置。</div>
       </div>
     </section>
   </main>

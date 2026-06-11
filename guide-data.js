@@ -1,53 +1,53 @@
 window.TRAVEL_GUIDE = {
-  title: "北京·带外国朋友玩手机地图",
+  title: "Beijing Travel Map for Visitors",
   goldProfile: {
     expectedOverviewPlaces: 20,
     expectedCategories: 6,
     expectedMinHtml: 24
   },
-  subtitle: "从王府井市中心参考点出发；按想做什么选地点，再进每个点的玩法页。大馆需微信小程序+护照提前预约，多数周一闭馆。",
+  subtitle: "Start from the Wangfujing reference point. Pick what you want to do, then open each place's guide. Major sights need WeChat mini-program booking with your passport; most close on Mondays.",
   anchor: {
-    name: "市中心参考点·王府井（可换成你的酒店）",
-    shortName: "王府井",
-    address: "北京市东城区王府井大街步行街",
+    name: "City-center reference · Wangfujing 王府井 (swap in your hotel)",
+    shortName: "Wangfujing",
+    address: "Wangfujing Pedestrian Street, Dongcheng, Beijing",
     lat: 39.916204,
     lon: 116.411344
   },
   categories: [
     {
       id: "royal",
-      title: "皇城地标/必去",
-      summary: "故宫、天坛、颐和园、雍和宫：先约票再排天，多数周一闭馆。",
+      title: "Imperial Landmarks 皇城地标",
+      summary: "Forbidden City, Temple of Heaven, Summer Palace, Lama Temple — book tickets first, then plan your days. Most close Mondays.",
       color: "#b03a2e"
     },
     {
       id: "wall",
-      title: "长城一日",
-      summary: "慕田峪人少有滑道，八达岭高铁直达好汉坡，按时间和体力二选一。",
+      title: "Great Wall Day Trip 长城",
+      summary: "Mutianyu: fewer crowds + toboggan. Badaling: direct high-speed rail to the Hero Slope. Pick one by time and stamina.",
       color: "#7d6608"
     },
     {
       id: "hutong",
-      title: "老城胡同 Citywalk",
-      summary: "什刹海、南锣、宝钞胡同、前门：老外最爱钻的胡同与老字号带。",
+      title: "Old City Hutong Citywalk 胡同",
+      summary: "Shichahai, Nanluoguxiang, Baochao Hutong, Qianmen — the alleys foreigners love to wander, plus heritage shops.",
       color: "#7b5aa6"
     },
     {
       id: "food",
-      title: "小吃/夜市/京味餐厅",
-      summary: "牛街、簋街、早市与四合院京菜：按时段选——早市/正餐/深夜。",
+      title: "Food Streets & Beijing Eats 小吃",
+      summary: "Niujie, Gui Street, a local morning market and a courtyard restaurant — choose by time of day: morning / dinner / late night.",
       color: "#b24f37"
     },
     {
       id: "modern",
-      title: "现代艺术/新北京",
-      summary: "798 与奥运地标：拍照、看展、机场顺路。",
+      title: "Modern Art & New Beijing 798",
+      summary: "798 Art Zone and the Olympic icons: photos, exhibitions, handy on the way to the airport.",
       color: "#1f618d"
     },
     {
       id: "indoor",
-      title: "博物馆/雨天备用",
-      summary: "免费大馆与教堂：下雨、酷暑或行程空档的室内选择。",
+      title: "Museums & Rainy-Day Indoor 博物馆",
+      summary: "Free national museum and a hidden cathedral — for rain, heat, or a spare half day.",
       color: "#2f64a3"
     }
   ],
@@ -55,61 +55,61 @@ window.TRAVEL_GUIDE = {
     {
       id: "gugong",
       categoryId: "royal",
-      name: "故宫+景山公园",
-      address: "北京市东城区景山前街4号",
-      bestFor: "首访必去：皇城核心+万春亭全景，建议约上午场留足时间",
-      feature: "午门进中轴线三大殿，神武门出对面登景山万春亭俯瞰整个紫禁城。",
-      routePairing: "上午故宫→景山，下午接南锣鼓巷或什刹海",
+      name: "Forbidden City + Jingshan 故宫+景山",
+      address: "4 Jingshan Front St, Dongcheng, Beijing",
+      bestFor: "First visit must-do: the imperial core plus the full panorama from Wanchun Pavilion. Book a morning slot to have enough time.",
+      feature: "Enter at the Meridian Gate, walk the central axis halls, exit the north gate, then climb Jingshan across the road to see the whole Forbidden City from above.",
+      routePairing: "Morning Forbidden City → Jingshan; afternoon Nanluoguxiang or Shichahai",
       tags: [
-        "必去",
-        "提前7天约票",
-        "周一闭馆"
+        "must-see",
+        "book 7 days ahead",
+        "closed Mondays"
       ],
       detailMode: "sequence",
       internalMap: true,
-      playbookIntro: "外国人参观故宫的关键在预约和入口：提前 7 天晚 20:00（中国时间）放票，微信小程序可加护照同行人；入园走人工通道最稳。",
-      sourceNote: "小红书 r013（外国人预约实操）、r017（中轴线顺序+景山机位）、r053/r056（四季民福烤鸭）、r046（周一闭馆）",
+      playbookIntro: "For foreign visitors the booking and the entrance are the whole game: tickets are released 7 days ahead at 20:00 China time, the WeChat mini-program accepts passport companions; use the staffed manual lane to enter.",
+      sourceNote: "Xiaohongshu r013 (booking walkthrough for foreigners), r017 (axis route + Jingshan viewpoint), r053/r056 (Siji Minfu roast duck), r046 (Monday closure)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "太和殿中轴线",
+              label: "Central axis halls 太和殿",
               query: "故宫太和殿",
               linkType: "exact",
-              text: "午门、太和殿、保和殿一路向北，租英文讲解器边走边听"
+              text: "Walk the axis 午门、太和殿、保和殿 northward; rent the English audio guide and listen as you go"
             },
             {
-              label: "景山万春亭",
+              label: "Wanchun Pavilion 景山万春亭",
               query: "景山公园万春亭",
               linkType: "exact",
-              text: "出神武门过马路登景山，万春亭是拍故宫全景的最佳机位"
+              text: "Exit the north gate, cross the road and climb Jingshan — Wanchun Pavilion is the best full-panorama spot of the Forbidden City"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "四季民福·故宫店",
+              label: "Siji Minfu 四季民福·故宫店",
               query: "四季民福烤鸭店 故宫店",
               linkType: "exact",
-              text: "逛完故宫去吃烤鸭：实测带外国家人两只鸭子光盘，椒盐鸭架、烤鸭都别错过；饭点排队可先取号"
+              text: "Roast duck right after the palace: a tested winner — one foreign family finished two whole ducks; don't skip the salt-and-pepper duck rack 椒盐鸭架. Queues at mealtimes, grab a number first"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "约票",
+              label: "Booking",
               linkType: "none",
-              text: "提前 7 天晚 20:00（中国时间）放票，热门日秒空：海外要算时差定闹钟，微信小程序『故宫博物院』可添加护照同行人"
+              text: "Tickets drop 7 days ahead at 20:00 China time and hot dates vanish in minutes — set an alarm for the time difference; the WeChat mini-program 故宫博物院 takes passport companions"
             },
             {
-              label: "周一闭馆",
+              label: "Closed Mondays",
               linkType: "none",
-              text: "故宫周一闭馆；门口纪念品可用支付宝（绑外卡，满 200 元收手续费），外国人微信收转账受限"
+              text: "The Forbidden City closes on Mondays. Alipay works with foreign cards at the shops (fee above ¥200); WeChat transfers are restricted for foreigners"
             }
           ]
         }
@@ -117,24 +117,24 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "午门",
-          kind: "到达",
-          duration: "20-30 分钟",
+          name: "Meridian Gate 午门",
+          kind: "Arrive",
+          duration: "20-30 min",
           googleQuery: "故宫午门",
-          action: "安检后从午门验票进入；外国护照机器常刷不过，直接排有工作人员的人工通道，手机出示订单+护照即可。",
+          action: "Enter through the Meridian Gate after security. Foreign passports often fail the machine gates — go straight to the staffed manual lane and show your booking plus passport.",
           recommendationGroups: [
             {
-              title: "提醒",
+              title: "Tips",
               items: [
                 {
-                  label: "人工通道",
+                  label: "Manual lane",
                   linkType: "none",
-                  text: "护照入园走人工通道最快，避免在闸机前浪费时间"
+                  text: "The staffed lane is fastest with a passport; don't waste time at the turnstiles"
                 },
                 {
-                  label: "上午场",
+                  label: "Morning slot",
                   linkType: "none",
-                  text: "想完整看完建议约上午场，外国朋友普遍想多看，下午场时间不够"
+                  text: "Book the morning session — foreign guests usually want more time than the afternoon allows"
                 }
               ]
             }
@@ -144,20 +144,20 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 2,
-          name: "太和殿—中轴线三大殿",
-          kind: "核心参观",
-          duration: "1.5-2 小时",
+          name: "Hall of Supreme Harmony 太和殿 (central axis)",
+          kind: "Core visit",
+          duration: "1.5-2 h",
           googleQuery: "故宫太和殿",
-          action: "沿中轴线看太和殿、中和殿、保和殿；入口可租英文语音讲解器，英文导游服务也很普及。",
+          action: "Follow the central axis through 太和殿、中和殿、保和殿. English audio guides are rented at the entrance and English tours are common.",
           recommendationGroups: [
             {
-              title: "看/拍",
+              title: "See & Shoot",
               items: [
                 {
-                  label: "太和殿广场",
+                  label: "Supreme Harmony square 太和殿",
                   query: "故宫太和殿",
                   linkType: "exact",
-                  text: "太和殿广场是第一张『到此一游』大片位，早进场人少"
+                  text: "The great square is the first big photo — emptier right after opening"
                 }
               ]
             }
@@ -167,20 +167,20 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 3,
-          name: "神武门",
-          kind: "出口",
-          duration: "10 分钟",
+          name: "Gate of Divine Prowess 神武门",
+          kind: "Exit",
+          duration: "10 min",
           googleQuery: "故宫神武门",
-          action: "从北门神武门出，过景山前街马路就是景山公园南门，步行约 5 分钟。",
+          action: "Exit via the north gate 神武门; Jingshan Park's south gate is right across the street, about 5 minutes on foot.",
           recommendationGroups: [
             {
-              title: "商家/顺路",
+              title: "Nearby & Next",
               items: [
                 {
-                  label: "景山公园",
+                  label: "Jingshan Park 景山公园",
                   query: "景山公园",
                   linkType: "exact",
-                  text: "出神武门直接接景山，别绕回午门方向"
+                  text: "Go straight across to Jingshan — don't loop back toward the Meridian Gate"
                 }
               ]
             }
@@ -190,31 +190,31 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 4,
-          name: "景山公园万春亭",
-          kind: "观景收尾",
-          duration: "40-60 分钟",
+          name: "Wanchun Pavilion 景山公园万春亭",
+          kind: "Finale view",
+          duration: "40-60 min",
           googleQuery: "景山公园万春亭",
-          action: "登景山中峰万春亭俯瞰故宫金顶全景，黄昏光线最好；下山后接什刹海或南锣鼓巷。",
+          action: "Climb to Wanchun Pavilion on the central peak for the golden-roof panorama of the Forbidden City — best light near dusk. Continue to Shichahai or Nanluoguxiang after.",
           recommendationGroups: [
             {
-              title: "看/拍",
+              title: "See & Shoot",
               items: [
                 {
-                  label: "万春亭",
+                  label: "Wanchun Pavilion 万春亭",
                   query: "景山公园万春亭",
                   linkType: "exact",
-                  text: "正对故宫中轴线的全景机位，外国朋友公认的『北京第一眼』"
+                  text: "Dead-center on the palace axis — the classic 'first look at Beijing' shot"
                 }
               ]
             },
             {
-              title: "吃/喝",
+              title: "Eat & Drink",
               items: [
                 {
-                  label: "四季民福·故宫店",
+                  label: "Siji Minfu 四季民福·故宫店",
                   query: "四季民福烤鸭店 故宫店",
                   linkType: "exact",
-                  text: "故宫周边外国人扎堆的烤鸭老店，椒盐鸭架、烤鸭都值得，逛完直接走过去"
+                  text: "The old roast-duck house near the palace where foreigners queue — duck rack 椒盐鸭架 and the duck itself both worth it; walk over after the park"
                 }
               ]
             }
@@ -229,7 +229,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9121,
         lon: 116.3916
       },
-      distance: "距王府井直线约 1.2 km",
+      distance: "~1.2 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -240,49 +240,49 @@ window.TRAVEL_GUIDE = {
     {
       id: "tiananmen",
       categoryId: "royal",
-      name: "天安门广场",
-      address: "北京市东城区长安街",
-      bestFor: "与故宫/国博同日：清晨人最少，照片最经典",
-      feature: "免费但需预约安检；持当日故宫票可免单独预约。",
-      routePairing: "天安门→故宫→景山一条线，或配国家博物馆",
+      name: "Tian'anmen Square 天安门广场",
+      address: "Chang'an Avenue, Dongcheng, Beijing",
+      bestFor: "Same day as the Forbidden City / National Museum; earliest morning = fewest people, most classic photos.",
+      feature: "Free but reservation + security check required; a same-day Forbidden City ticket exempts you from a separate square booking.",
+      routePairing: "Square → Forbidden City → Jingshan in one line, or pair with the National Museum",
       tags: [
-        "免费",
-        "需预约",
-        "早起"
+        "free",
+        "reservation needed",
+        "go early"
       ],
       detailMode: "compact",
-      playbookIntro: "天安门本身 30-60 分钟足够：拍城楼和广场，重点是把预约和安检时间算进行程。",
-      sourceNote: "小红书 r017（早到避人流）、r046（免费微信预约/故宫票可免）、r044（与国博同日）",
+      playbookIntro: "30-60 minutes is enough for the square itself: shoot the gate tower and the square, and budget real time for the reservation and security queue.",
+      sourceNote: "Xiaohongshu r017 (arrive early), r046 (free WeChat booking / FC-ticket exemption), r044 (same day as National Museum)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "天安门城楼",
+              label: "Tian'anmen Gate 天安门",
               query: "天安门",
               linkType: "exact",
-              text: "清晨到场人最少，城楼正面照最经典；升旗仪式、安检都要预留时间"
+              text: "Fewest people at dawn; the head-on gate photo is the classic. The flag ceremony 升旗仪式 needs an even earlier spot, and security 安检 takes time"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "预约+护照",
+              label: "Booking + passport",
               linkType: "none",
-              text: "免费但要微信预约+护照安检；已有当日故宫门票可不用单独约广场"
+              text: "Free, but WeChat reservation + passport security check; skip the separate booking if you hold a same-day Forbidden City ticket"
             }
           ]
         },
         {
-          title: "商家/顺路",
+          title: "Nearby & Next",
           items: [
             {
-              label: "国家博物馆",
+              label: "National Museum 国家博物馆",
               query: "中国国家博物馆",
               linkType: "exact",
-              text: "就在广场东侧，免费但要提前 7 天约，周一闭馆"
+              text: "On the east side of the square — free, but book 7 days ahead; closed Mondays"
             }
           ]
         }
@@ -290,11 +290,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "天安门广场",
-          kind: "打卡",
-          duration: "30-60 分钟",
+          name: "Tian'anmen Square 天安门广场",
+          kind: "Photo stop",
+          duration: "30-60 min",
           googleQuery: "天安门广场",
-          action: "安检入场拍照，之后向北接故宫或向东进国博。",
+          action: "Pass security, take photos, then head north into the Forbidden City or east into the National Museum.",
           recommendationGroups: [],
           lat: 39.904101,
           lon: 116.397641
@@ -306,7 +306,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9027,
         lon: 116.3914
       },
-      distance: "距王府井直线约 1.8 km",
+      distance: "~1.8 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -317,55 +317,55 @@ window.TRAVEL_GUIDE = {
     {
       id: "tiantan",
       categoryId: "royal",
-      name: "天坛",
-      address: "北京市东城区天坛路甲1号",
-      bestFor: "半天：祈年殿是仅次于故宫的皇家建筑照片位",
-      feature: "祈年殿+圜丘坛，买联票最划算；周边有本地早市可顺路。",
-      routePairing: "上午天坛+幸福大街早市，下午接前门大街",
+      name: "Temple of Heaven 天坛",
+      address: "1 Tiantan Rd, Dongcheng, Beijing",
+      bestFor: "Half a day — the Hall of Prayer is Beijing's most photogenic building after the Forbidden City.",
+      feature: "Hall of Prayer + Circular Mound; the combo ticket 联票 is the right buy. A real local morning market sits just east.",
+      routePairing: "Morning market + Temple of Heaven, afternoon on to Qianmen Street",
       tags: [
-        "联票",
-        "周一部分关闭",
-        "英文讲解多"
+        "combo ticket",
+        "partly closed Mon",
+        "good English signage"
       ],
       detailMode: "compact",
-      playbookIntro: "买联票看祈年殿和圜丘坛即可；想看『非游客北京』，早上先去东边幸福大街早市吃一轮再进园。",
-      sourceNote: "小红书 r046（联票/周一）、r033/r036（祈年殿、圜丘英文讲解）、r025（幸福大街早市顺路）、r044（行程位置）",
+      playbookIntro: "Buy the combo ticket and focus on the Hall of Prayer 祈年殿 and Circular Mound 圜丘. For a 'non-tourist Beijing' breakfast, hit Xingfu Street morning market east of the park first.",
+      sourceNote: "Xiaohongshu r046 (combo/Monday), r033/r036 (English-guided 祈年殿/圜丘), r025 (Xingfu St market nearby), r044 (itinerary slot)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "祈年殿",
+              label: "Hall of Prayer 祈年殿",
               query: "天坛祈年殿",
               linkType: "exact",
-              text: "三重檐圆顶是北京最上镜的古建之一，正面台阶下仰拍最出片"
+              text: "The triple-eaved round hall — shoot from below the front steps for the classic upward angle"
             },
             {
-              label: "圜丘坛",
+              label: "Circular Mound 圜丘坛",
               query: "天坛圜丘",
               linkType: "exact",
-              text: "天心石、回音壁这类回音互动是外国朋友最爱玩的"
+              text: "The echo stones — 天心石 and the Echo Wall 回音壁 are the interactive bits foreign visitors love"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "幸福大街早市",
+              label: "Xingfu St morning market 幸福大街",
               query: "幸福大街 菜市场",
               linkType: "search",
-              text: "天坛东边的本地早市，菜团子+羊杂汤约 20 元吃饱，13 点前收摊"
+              text: "Local market east of the park: corn buns 菜团子 + lamb offal soup 羊杂汤, full for about ¥20; stalls close by 1 pm"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "联票",
+              label: "Combo ticket",
               linkType: "none",
-              text: "祈年殿等景点要联票才进得去，只买门票会白跑；周一部分殿座关闭，微信预约带护照"
+              text: "The inner sights need the combo ticket 联票 — gate-only tickets waste the trip; some halls close Mondays; WeChat booking with passport"
             }
           ]
         }
@@ -373,11 +373,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "天坛",
-          kind: "参观",
-          duration: "2-3 小时",
+          name: "Temple of Heaven 天坛",
+          kind: "Visit",
+          duration: "2-3 h",
           googleQuery: "天坛公园",
-          action: "东门或南门进，祈年殿→回音壁→圜丘一条线；公园里晨练的本地人也是外国朋友爱看的风景。",
+          action: "Enter at the east or south gate; Hall of Prayer → Echo Wall → Circular Mound in one line. The morning exercisers in the park are a sight of their own.",
           recommendationGroups: [],
           lat: 39.881303,
           lon: 116.40914
@@ -389,7 +389,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.8799,
         lon: 116.4029
       },
-      distance: "距王府井直线约 3.9 km",
+      distance: "~3.9 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -400,44 +400,44 @@ window.TRAVEL_GUIDE = {
     {
       id: "yiheyuan",
       categoryId: "royal",
-      name: "颐和园",
-      address: "北京市海淀区新建宫门路19号",
-      bestFor: "半天到一天：皇家园林+昆明湖，走路多体力消耗大",
-      feature: "北宫门进可少走路；长廊和昆明湖游船是外国攻略公认重点。",
-      routePairing: "在西北郊，单独半天；回程可顺奥林匹克公园看夜景",
+      name: "Summer Palace 颐和园",
+      address: "19 Xinjiangongmen Rd, Haidian, Beijing",
+      bestFor: "Half to a full day: imperial garden + Kunming Lake; lots of walking.",
+      feature: "Enter at the North Palace Gate to save your legs; the Long Corridor and a Kunming Lake boat are what every guide agrees on.",
+      routePairing: "It's in the northwest suburbs — give it its own half day; the Olympic Park is on the way back",
       tags: [
-        "皇家园林",
-        "走路多",
-        "游船"
+        "imperial garden",
+        "lots of walking",
+        "boat ride"
       ],
       detailMode: "compact",
-      playbookIntro: "面积很大，别贪全图：北宫门进，苏州街—长廊—昆明湖一线最省腿；夏天游船、冬天冰面各有玩法。",
-      sourceNote: "小红书 r017（北宫门省腿/长廊+游船）、r003（省钱高效路线）、r046（当日或提前7天约）",
+      playbookIntro: "It's huge — don't try to see it all. North Palace Gate in, then Suzhou Street → Long Corridor → Kunming Lake is the leg-saving line. Boats in summer, ice in winter.",
+      sourceNote: "Xiaohongshu r017 (North Gate / corridor + boat), r003 (efficient money-saving route), r046 (same-day or 7-day booking)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "长廊",
+              label: "Long Corridor 长廊",
               query: "颐和园长廊",
               linkType: "exact",
-              text: "长廊、昆明湖、游船是攻略公认重点；728 米彩绘梁画慢慢走"
+              text: "长廊、昆明湖、游船 are the agreed highlights — 728 m of painted beams, every panel a different story, walk it slowly"
             },
             {
-              label: "昆明湖",
+              label: "Kunming Lake 昆明湖",
               query: "颐和园昆明湖",
               linkType: "exact",
-              text: "坐一段游船，万寿山、佛香阁全景一眼收，比绕湖走省力得多"
+              text: "Take a boat — 游船、万寿山、佛香阁 in one view, far easier than walking the shoreline"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "入口选择",
+              label: "Which gate",
               linkType: "none",
-              text: "北宫门进比东宫门少走很多路；当日可约但旺季建议提前，护照+微信小程序"
+              text: "North Palace Gate 北宫门 saves a lot of walking versus the east gate; same-day booking usually works but book ahead in peak season, passport + WeChat"
             }
           ]
         }
@@ -445,11 +445,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "颐和园（北宫门）",
-          kind: "参观",
-          duration: "3-4 小时",
+          name: "Summer Palace (North Palace Gate) 颐和园北宫门",
+          kind: "Visit",
+          duration: "3-4 h",
           googleQuery: "颐和园北宫门",
-          action: "北宫门进→苏州街→长廊→昆明湖游船，按体力取舍；出园打车或地铁回城。",
+          action: "North gate in → Suzhou Street → Long Corridor → Kunming Lake boat, trimming by stamina; taxi or metro back to town.",
           recommendationGroups: [],
           lat: 39.991323,
           lon: 116.270741
@@ -461,7 +461,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9901,
         lon: 116.2647
       },
-      distance: "距王府井直线约 15 km",
+      distance: "~15 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -472,72 +472,72 @@ window.TRAVEL_GUIDE = {
     {
       id: "yonghegong",
       categoryId: "royal",
-      name: "雍和宫（+周边小吃带）",
-      address: "北京市东城区雍和宫大街12号",
-      bestFor: "藏传佛教寺庙+出门就是小吃带，宗教体验和吃可以一次完成",
-      feature: "『逛完雍和宫出来全是好吃的』——周边步行圈老店密度极高。",
-      routePairing: "雍和宫→五道营/北新桥一带小吃→晚上接簋街",
+      name: "Lama Temple 雍和宫 (+ snack belt)",
+      address: "12 Yonghegong St, Dongcheng, Beijing",
+      bestFor: "Tibetan Buddhist temple with a dense old-shop snack belt right outside — worship and food in one stop.",
+      feature: "'Walk out of the Lama Temple and everything is delicious' — the walkable circle around it is packed with shops locals keep recommending.",
+      routePairing: "Lama Temple → Wudaoying / Beixinqiao snacks → Gui Street at night",
       tags: [
-        "每日开放",
-        "上香",
-        "小吃带"
+        "open daily",
+        "incense",
+        "snack belt"
       ],
       detailMode: "compact",
-      playbookIntro: "寺庙本体 1-1.5 小时；真正的隐藏玩法是出门后的小吃带：从雍和宫到北新桥步行圈内全是被本地人反复安利的老店。",
-      sourceNote: "小红书 r026（雍和宫18件套：同日升/奶油老生/六面寿/烤肉宛/红星前进，图片多模态提取）、r046（每日开放）、r044（行程位置）",
+      playbookIntro: "The temple itself takes 1-1.5 h; the hidden play is the snack belt after — the walk from 雍和宫 toward 北新桥 is lined with beloved old shops.",
+      sourceNote: "Xiaohongshu r026 (Yonghegong 18-item snack list: 同日升/奶油老生/六面寿/烤肉宛/红星前进, extracted from images), r046 (open daily), r044 (itinerary slot)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "雍和宫",
+              label: "Lama Temple 雍和宫",
               query: "雍和宫",
               linkType: "exact",
-              text: "香火最旺的藏传佛教寺庙；每日开放，微信预约带护照"
+              text: "Beijing's busiest Tibetan Buddhist temple; 每日开放 — open every day, WeChat booking with passport, free incense at the gate"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "六面寿",
+              label: "Liumianshou 六面寿",
               query: "六面寿 雍和宫",
               linkType: "search",
-              text: "雍和宫对面的打卤面店，可以无限续面续卤，便宜家常"
+              text: "Braised-sauce noodles right opposite the temple — unlimited noodle and sauce refills, cheap and homely"
             },
             {
-              label: "奶油老生",
+              label: "Naiyou Laosheng 奶油老生",
               query: "奶油老生 北京",
               linkType: "search",
-              text: "现点现炸的奶油炸糕，外皮金黄酥脆蘸白糖，北京小孩的童年味道"
+              text: "Fried cream puffs 奶油炸糕 made to order — golden crisp outside, dip in white sugar; an old Beijing childhood taste"
             },
             {
-              label: "同日升粮行",
+              label: "Tongrisheng 同日升粮行",
               query: "同日升粮行",
               linkType: "search",
-              text: "石磨现打的二八酱（二分芝麻八分花生），可以买一罐带走拌面"
+              text: "Stone-ground 二八酱 sesame-peanut paste — take a jar home for noodles"
             }
           ]
         },
         {
-          title: "买/带走",
+          title: "Buy & Take",
           items: [
             {
-              label: "红星前进面包牛奶公司",
+              label: "Hongxing Qianjin 红星前进面包牛奶公司",
               query: "红星前进面包牛奶公司",
               linkType: "search",
-              text: "能买到印当天日期的吐司+玻璃瓶牛奶，生日纪念日来买很有意义，拍照也好看"
+              text: "Toast stamped with today's date plus glass-bottle milk — birthday-photo favorite"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "店铺分布",
+              label: "Shop locations",
               linkType: "none",
-              text: "小吃店散在雍和宫、北新桥、交道口一带；烤肉宛、同日升等老店有多家分店，出发前按店名在高德确认"
+              text: "The shops scatter across 雍和宫、北新桥、交道口; chains like 烤肉宛、同日升 have multiple branches — check names in AMap before heading out"
             }
           ]
         }
@@ -545,11 +545,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "雍和宫",
-          kind: "参观+觅食",
-          duration: "2-3 小时",
+          name: "Lama Temple 雍和宫",
+          kind: "Visit + eat",
+          duration: "2-3 h",
           googleQuery: "雍和宫",
-          action: "上午进殿上香参观，中午沿雍和宫大街向南找六面寿/奶油老生这批老店，吃完可逛旁边五道营胡同。",
+          action: "Morning in the temple halls, then walk south along the street for 六面寿 / 奶油老生 and the other old shops; Wudaoying Hutong 五道营 is next door.",
           recommendationGroups: [],
           lat: 39.947004,
           lon: 116.417246
@@ -561,7 +561,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9456,
         lon: 116.411
       },
-      distance: "距王府井直线约 3.5 km",
+      distance: "~3.5 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -572,60 +572,60 @@ window.TRAVEL_GUIDE = {
     {
       id: "mutianyu",
       categoryId: "wall",
-      name: "慕田峪长城",
-      address: "北京市怀柔区慕田峪村",
-      bestFor: "人少景美+滑道下山，外国游客比例高、氛围松弛——多数外国攻略的首选",
-      feature: "植被覆盖 90%+，缆车上 14 号台走到 20 号好汉坡，再滑道冲下山。",
-      routePairing: "整天行程；回城晚上接簋街小龙虾或奥体夜景",
+      name: "Mutianyu Great Wall 慕田峪长城",
+      address: "Mutianyu Village, Huairou, Beijing",
+      bestFor: "Fewer crowds, greener views, and the toboggan down — the usual pick in foreigner guides, relaxed vibe.",
+      feature: "90%+ tree cover. Cable car up to Tower 14, walk to Tower 20 (the Hero Slope), toboggan down from Tower 6.",
+      routePairing: "Full-day trip; Gui Street crayfish or the Olympic lights on the way back",
       tags: [
-        "全天",
-        "滑道",
-        "外国人多",
-        "防黑车"
+        "full day",
+        "toboggan",
+        "foreigner favorite",
+        "avoid unlicensed taxis"
       ],
       detailMode: "compact",
       internalMap: false,
-      actionSummary: "标准动线：市区正规大巴出发 → 游客中心买门票 40 元+摆渡车 15 元 → 缆车上 14 号敌楼 → 沿城墙走到 20 号好汉坡 → 折回 6 号台滑道下山，山上全程约 3-4 小时。",
-      playbookIntro: "选段结论：要清静、要滑道、带娃→慕田峪；要高铁直达和『好汉坡名场面』→八达岭。慕田峪交通靠大巴/包车，务必走正规渠道。敌楼点位现场跟指示牌走，本页不放园内地图。",
-      sourceNote: "小红书 r061（交通/票价/最佳组合/避坑）、r066（三种登城组合价格）、r063（八达岭对比/外国朋友多）、r046（官方人少+缆车滑道）、r060/r062/r064/r065/r067（亲子互证）",
+      actionSummary: "Standard line: official bus from the city → ticket ¥40 + shuttle ¥15 at the visitor center → cable car up to Tower 14 → walk the wall to Tower 20 (Hero Slope 好汉坡) → back to Tower 6 and toboggan down. About 3-4 h on the wall.",
+      playbookIntro: "Which wall: quiet + toboggan + kids → Mutianyu; fastest access + the textbook Hero Slope → Badaling. Mutianyu runs on buses/charters — use official channels only. Follow the signage between towers; this page keeps no in-park map.",
+      sourceNote: "Xiaohongshu r061 (transport/prices/best combo), r066 (climb combos), r063 (vs Badaling / many foreign visitors), r046 (less crowded, cable car & toboggan), r060/r062/r064/r065/r067 (family corroboration)",
       playbookGroups: [
         {
-          title: "玩",
+          title: "Play",
           items: [
             {
-              label: "滑道下山",
+              label: "Toboggan 滑道",
               linkType: "none",
-              text: "从 6 号敌楼乘滑道下山，手动控速像长城过山车，5-8 分钟，是外国朋友最兴奋的环节；1.2 米以下需成人同乘，雨雪天停开"
+              text: "Ride the toboggan 滑道 down from Tower 6 — you control the speed, like a Great Wall roller coaster, 5-8 minutes and the highlight for most visitors; kids under 1.2 m share a sled, closed in rain or snow"
             }
           ]
         },
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "20号台好汉坡",
+              label: "Tower 20 · Hero Slope 好汉坡",
               linkType: "none",
-              text: "慕田峪最高点，城墙蜿蜒到天边；体力弱在 14/15 号台拍照即可，风景差别不大"
+              text: "The highest point — the wall snakes to the horizon. Low on energy? The shots at Towers 14/15 by the cable car 缆车 are nearly as good"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "正规大巴",
+              label: "Official buses",
               linkType: "none",
-              text: "前门『北京旅游集散中心』往返 80 元（7:00-11:00 流水发车，13:00-16:00 集合返程）；和平西桥『巴士达』往返 115 元含摆渡车+门票；别坐黑车，慢公交换乘多耗 2 小时以上；自驾导航『慕田峪P4停车场』"
+              text: "Qianmen tourist hub round trip ¥80 (depart 7:00-11:00, return 13:00-16:00) or Bus-Da from Hepingxiqiao ¥115 incl. shuttle 摆渡车 + ticket. Never take unlicensed taxis 黑车; slow public buses waste 2+ hours. Driving? Navigate to 慕田峪P4停车场"
             },
             {
-              label: "登城组合",
+              label: "Climb combos",
               linkType: "none",
-              text: "缆车（封闭轿厢，上 14 号敌楼）或索道+滑道（开放式，6 号台上下）各 140 往返；最优玩法缆车上 14 号→走到 20 号好汉坡→回 6 号滑道下；雨雪天滑道停开，1.2 米以下需成人同乘"
+              text: "Cable car 缆车 (enclosed, to Tower 14) or open chairlift + toboggan (Tower 6) — each ¥140 return. Best line: cable up to 14 → walk to 20 → toboggan from 6. Toboggan closes in rain/snow"
             },
             {
-              label: "8点前到",
+              label: "Before 8 am",
               linkType: "none",
-              text: "避开 9-11 点人流高峰拍照没人挡；山顶简餐贵，自带水和干粮；穿运动鞋"
+              text: "Beat the 9-11 am crowd for clean photos; summit food is pricey, bring water and snacks; wear real shoes"
             }
           ]
         }
@@ -633,11 +633,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "慕田峪游客中心",
-          kind: "到达",
-          duration: "全天",
+          name: "Mutianyu Visitor Center 慕田峪游客中心",
+          kind: "Arrive",
+          duration: "full day",
           googleQuery: "慕田峪长城",
-          action: "大巴/包车到游客中心，门票 40 元（18 岁以下免票）+摆渡车 15 元，摆渡到登城口后按『缆车上 14 号→20 号好汉坡→6 号滑道下』走。",
+          action: "Bus or charter to the visitor center; ticket ¥40 (under-18 free) + shuttle ¥15, then follow 'cable up Tower 14 → Tower 20 Hero Slope → toboggan from Tower 6'.",
           recommendationGroups: [],
           lat: 40.435546,
           lon: 116.569376
@@ -649,7 +649,7 @@ window.TRAVEL_GUIDE = {
         lat: 40.4344,
         lon: 116.5635
       },
-      distance: "距王府井直线约 59 km",
+      distance: "~59 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -660,44 +660,44 @@ window.TRAVEL_GUIDE = {
     {
       id: "badaling",
       categoryId: "wall",
-      name: "八达岭长城",
-      address: "北京市延庆区八达岭镇",
-      bestFor: "时间紧/带老人：高铁 30 分钟直达，缆车上好汉坡全程 1.5 小时搞定",
-      feature: "课本里的长城——『不到长城非好汉』的北八楼就在这里。",
-      routePairing: "半天到大半天；回程高铁到北京北站接什刹海",
+      name: "Badaling Great Wall 八达岭长城",
+      address: "Badaling, Yanqing, Beijing",
+      bestFor: "Short on time or with elders: 30-min high-speed rail, cable car to the Hero Slope, 1.5 h on the wall.",
+      feature: "The textbook Great Wall — 'He who has not reached the Great Wall is not a true man' was written about the North 8th Tower here.",
+      routePairing: "Half to most of a day; rail back to Beijing North then Shichahai at dusk",
       tags: [
-        "高铁直达",
-        "好汉坡",
-        "人多"
+        "high-speed rail",
+        "Hero Slope",
+        "crowded"
       ],
       detailMode: "compact",
       internalMap: false,
-      actionSummary: "标准动线：北京北站乘高铁 30 分钟到八达岭长城站 → 出站进景区乘缆车至北七楼 → 步行 20 分钟到北八楼好汉坡拍照 → 原路返回，全程约 1.5 小时在墙上。",
-      playbookIntro: "八达岭赢在交通：北京北站高铁 30 分钟出站就是景区。人多是常态，早班高铁+缆车直上能避开大部队。",
-      sourceNote: "小红书 r063（高铁/缆车/北八楼/免票政策）、r017（高铁或德胜门877路）、r046（微信约票+大巴联订）",
+      actionSummary: "Standard line: high-speed rail from Beijing North 北京北站 30 min to Badaling Great Wall station → cable car to North Tower 7 → walk 20 min to North Tower 8, the Hero Slope 好汉坡 → return the same way. About 1.5 h on the wall.",
+      playbookIntro: "Badaling wins on access: walk out of the rail station and you're at the gate. Crowds are a given — the earliest train plus cable car skips most of them.",
+      sourceNote: "Xiaohongshu r063 (rail/cable/N8 tower/free-ticket policy), r017 (rail or Bus 877 from Deshengmen), r046 (WeChat ticket + bus bundle)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "北八楼好汉坡",
+              label: "North Tower 8 · Hero Slope 北八楼",
               linkType: "none",
-              text: "缆车到北七楼走 20 分钟即到，城墙蜿蜒到天边的名场面就在这里"
+              text: "20 minutes' walk from the cable car at North Tower 7 — the stele and the wall stretching over the ridges is the classic frame, morning light is best"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "高铁票",
+              label: "Rail tickets",
               linkType: "none",
-              text: "北京北→八达岭长城站车次有限，提前在 12306 买好往返；节假日 877 公交容易堵车"
+              text: "Beijing North 北京北 → Badaling trains are limited — book both ways on 12306 in advance; Bus 877 jams on holidays"
             },
             {
-              label: "免票",
+              label: "Free entry",
               linkType: "none",
-              text: "18 岁以下、60 岁以上免门票（缆车另算单程 100/往返 140）"
+              text: "Under 18 and over 60 enter free (cable car still ¥100 single / ¥140 return)"
             }
           ]
         }
@@ -705,11 +705,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "八达岭长城",
-          kind: "到达",
-          duration: "大半天",
+          name: "Badaling Great Wall 八达岭长城",
+          kind: "Arrive",
+          duration: "half day+",
           googleQuery: "八达岭长城",
-          action: "北京北站乘京张高铁 30 分钟直达（提前买票，备选德胜门 877 路）；微信约票（票+景区大巴联订免排队），缆车至北七楼后步行 20 分钟到北八楼好汉坡。",
+          action: "High-speed rail from Beijing North (30 min, book ahead; Bus 877 as backup); WeChat ticket + park-bus bundle skips queues; cable car to North Tower 7 then walk 20 min to the Hero Slope.",
           recommendationGroups: [],
           lat: 40.361581,
           lon: 116.011305
@@ -721,7 +721,7 @@ window.TRAVEL_GUIDE = {
         lat: 40.3603,
         lon: 116.0051
       },
-      distance: "距王府井直线约 60 km",
+      distance: "~60 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -732,55 +732,55 @@ window.TRAVEL_GUIDE = {
     {
       id: "shichahai",
       categoryId: "hutong",
-      name: "什刹海·烟袋斜街·鼓楼",
-      address: "北京市西城区地安门外大街",
-      bestFor: "黄昏到夜晚最佳：湖面+斜街+鼓楼一条线，夜里变酒吧烤串带",
-      feature: "外国攻略的标准傍晚线：前海湖畔→银锭桥→烟袋斜街→登鼓楼。",
-      routePairing: "接在故宫/景山或南锣鼓巷之后，傍晚开走",
+      name: "Shichahai · Yandai Lane · Drum Tower 什刹海·烟袋斜街·鼓楼",
+      address: "Di'anmen Outer St, Xicheng, Beijing",
+      bestFor: "Best at dusk into night: lake, slanted old lane and the Drum Tower in one line; turns into a bar-and-skewer strip after dark.",
+      feature: "The standard evening line in foreigner guides: lakeside → Silver Ingot Bridge → Yandai Lane → climb the Drum Tower.",
+      routePairing: "Follows naturally after Forbidden City / Jingshan or Nanluoguxiang; start at dusk",
       tags: [
-        "黄昏",
-        "湖景",
-        "夜生活"
+        "dusk",
+        "lake views",
+        "nightlife"
       ],
       detailMode: "sequence",
       internalMap: true,
-      playbookIntro: "这条线 1.5-2 小时走完但值得放慢：湖边看本地人遛弯下棋，斜街淘小店，最后登鼓楼看暮色里的老城天际线。",
-      sourceNote: "小红书 r017（Shichahai→Yandai Xiejie→Drum Tower 顺序+现场购票）、r028（什刹海/后海夜市烤串）、r044（行程位置）",
+      playbookIntro: "The walk takes 1.5-2 h but deserves slowness: watch locals fish and play chess by the lake, browse the lane, then catch the drum show and old-town skyline from the tower.",
+      sourceNote: "Xiaohongshu r017 (Shichahai→Yandai→Drum Tower order + on-site tickets), r028 (Houhai night-food strip), r044 (itinerary slot)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "银锭桥",
+              label: "Silver Ingot Bridge 银锭桥",
               query: "银锭桥",
               linkType: "exact",
-              text: "前海、后海交界的小石桥，桥上望西山是经典视角"
+              text: "The little stone bridge between 前海、后海 — looking west from it is a classic old-Beijing view"
             },
             {
-              label: "鼓楼",
+              label: "Drum Tower 鼓楼",
               query: "北京鼓楼",
               linkType: "exact",
-              text: "登楼看击鼓表演、老北京天际线；现场购票，注意末场场次"
+              text: "Climb for the drum show 击鼓表演 and the old-town skyline 老北京天际线; tickets on site 现场购票, check the last show time"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "后海",
+              label: "Houhai strip 后海",
               linkType: "none",
-              text: "夜里湖边一圈烤串、豆汁、卤煮，想猎奇就挑战豆汁"
+              text: "At night the lakeside loops with skewers 烤串, fermented mung-bean drink 豆汁 and offal stew 卤煮 — dare a friend with the 豆汁"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "登楼场次",
+              label: "Tower shows",
               linkType: "none",
-              text: "鼓楼、钟楼：门票现场买即可，注意击鼓表演的末场时间"
+              text: "鼓楼、钟楼: buy tickets on site; note the last drum performance 击鼓表演 of the day"
             }
           ]
         }
@@ -788,19 +788,19 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "什刹海湖畔",
-          kind: "到达",
-          duration: "30-40 分钟",
+          name: "Shichahai lakeside 什刹海湖畔",
+          kind: "Arrive",
+          duration: "30-40 min",
           googleQuery: "什刹海",
-          action: "地安门外大街入口下车沿前海湖畔走，看本地人钓鱼下棋；夏天可划船，冬天湖面变冰场。",
+          action: "Get off at the Di'anmen Outer St entrance and walk the Qianhai shore — locals fishing and playing chess; boats in summer, an ice rink in winter.",
           recommendationGroups: [
             {
-              title: "看/拍",
+              title: "See & Shoot",
               items: [
                 {
-                  label: "前海湖面",
+                  label: "Qianhai lake 前海",
                   linkType: "none",
-                  text: "黄昏湖面逆光+柳树剪影最出片"
+                  text: "Backlit water and willow silhouettes at dusk — best shots of the walk"
                 }
               ]
             }
@@ -810,30 +810,30 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 2,
-          name: "银锭桥",
-          kind: "打卡",
-          duration: "10-15 分钟",
+          name: "Silver Ingot Bridge 银锭桥",
+          kind: "Photo stop",
+          duration: "10-15 min",
           googleQuery: "银锭桥",
-          action: "走到前海后海交界的银锭桥，桥上拍湖景；这里也是酒吧带的起点。",
+          action: "Cross the small bridge where 前海 meets 后海 and shoot the lake; the bar strip starts here.",
           recommendationGroups: [],
           lat: 39.939,
           lon: 116.393442
         },
         {
           order: 3,
-          name: "烟袋斜街",
-          kind: "逛街",
-          duration: "20-30 分钟",
+          name: "Yandai Xiejie 烟袋斜街",
+          kind: "Browse",
+          duration: "20-30 min",
           googleQuery: "烟袋斜街",
-          action: "北京最老的斜街之一，800 米小店淘烟袋、葫芦、文创小物，出口正对鼓楼。",
+          action: "One of Beijing's oldest slanted lanes — pipes, gourds and small craft shops; the far end faces the Drum Tower.",
           recommendationGroups: [
             {
-              title: "买/带走",
+              title: "Buy & Take",
               items: [
                 {
-                  label: "斜街小店",
+                  label: "Lane shops",
                   linkType: "none",
-                  text: "小店流动性大，看中就买；大件别在这里买，质量现场确认"
+                  text: "Shops turn over fast — buy what you like on the spot, but save big purchases for elsewhere"
                 }
               ]
             }
@@ -843,19 +843,19 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 4,
-          name: "鼓楼",
-          kind: "登楼收尾",
-          duration: "40-60 分钟",
+          name: "Drum Tower 鼓楼",
+          kind: "Climb & finish",
+          duration: "40-60 min",
           googleQuery: "北京鼓楼",
-          action: "登鼓楼看击鼓表演和老城屋顶天际线；下楼后夜宵接后海烤串或打车去簋街。",
+          action: "Climb for the drum show and rooftop skyline; afterwards, supper on the Houhai strip or taxi to Gui Street.",
           recommendationGroups: [
             {
-              title: "吃/喝",
+              title: "Eat & Drink",
               items: [
                 {
-                  label: "后海夜市带",
+                  label: "Houhai night strip 后海",
                   linkType: "none",
-                  text: "烤串、豆汁、卤煮都在湖边一圈，适合收尾夜宵"
+                  text: "Skewers 烤串, 豆汁 and 卤煮 ring the lake — the natural supper after the tower"
                 }
               ]
             }
@@ -870,7 +870,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.936,
         lon: 116.3901
       },
-      distance: "距王府井直线约 2.7 km",
+      distance: "~2.7 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -881,47 +881,47 @@ window.TRAVEL_GUIDE = {
     {
       id: "nanluoguxiang",
       categoryId: "hutong",
-      name: "南锣鼓巷",
-      address: "北京市东城区南锣鼓巷",
-      bestFor: "800 年胡同主街+小吃纪念品，首访胡同的低门槛入口",
-      feature: "人多但方便：糖葫芦边走边吃，支巷里才是安静的老北京。",
-      routePairing: "故宫/景山出来步行可达，接什刹海正好",
+      name: "Nanluogu Lane 南锣鼓巷",
+      address: "Nanluoguxiang, Dongcheng, Beijing",
+      bestFor: "An 800-year-old hutong main street with snacks and souvenirs — the easiest first hutong.",
+      feature: "Busy but convenient: eat candied hawthorn as you walk; the real old Beijing hides in the side lanes.",
+      routePairing: "Walkable from the Forbidden City / Jingshan; chains straight into Shichahai",
       tags: [
-        "顺路",
-        "小吃",
-        "人多"
+        "en route",
+        "snacks",
+        "crowded"
       ],
       detailMode: "compact",
-      playbookIntro: "主街 20 分钟走完，别只走主街：东西两侧支巷（帽儿胡同、雨儿胡同）才有胡同生活的样子。",
-      sourceNote: "小红书 r017（Nanluogu Lane 800-year hutongs/糖葫芦）、r044（行程位置）",
+      playbookIntro: "The main street takes 20 minutes — don't stop there: the side lanes (帽儿胡同、雨儿胡同) are where courtyard doorways and hutong life actually are.",
+      sourceNote: "Xiaohongshu r017 (800-year hutongs / tanghulu), r044 (itinerary slot)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "糖葫芦",
+              label: "Candied hawthorn 糖葫芦",
               linkType: "none",
-              text: "主街边走边吃糖葫芦、煎饼，山楂经典款先试"
+              text: "Eat as you walk — 糖葫芦、煎饼 are the safe crowd-pleasers; try the classic hawthorn first"
             }
           ]
         },
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "帽儿胡同、雨儿胡同",
+              label: "Mao'er & Yu'er lanes 帽儿胡同、雨儿胡同",
               linkType: "none",
-              text: "拐进支巷看四合院门墩和老门牌，人少安静才好拍"
+              text: "Turn into the side lanes for door piers and old house plates — quiet enough to actually shoot"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "错峰",
+              label: "Beat the crowd",
               linkType: "none",
-              text: "周末和节假日主街非常挤；工作日或晚上来，配糖葫芦、煎饼边走边吃更松弛"
+              text: "Weekends and holidays the main street is packed; weekdays or evenings feel far better — pair with 糖葫芦、煎饼 and amble"
             }
           ]
         }
@@ -929,11 +929,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "南锣鼓巷",
-          kind: "逛街",
-          duration: "1-1.5 小时",
+          name: "Nanluogu Lane 南锣鼓巷",
+          kind: "Stroll",
+          duration: "1-1.5 h",
           googleQuery: "南锣鼓巷",
-          action: "南口进北口出，主街吃小吃，支巷看生活；北口出来向西步行 10 分钟就是什刹海。",
+          action: "South gate in, north gate out; snacks on the main drag, life in the side lanes. From the north end Shichahai is 10 minutes west.",
           recommendationGroups: [],
           lat: 39.933705,
           lon: 116.403947
@@ -945,7 +945,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9323,
         lon: 116.3977
       },
-      distance: "距王府井直线约 2.0 km",
+      distance: "~2.0 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -956,62 +956,62 @@ window.TRAVEL_GUIDE = {
     {
       id: "baochao",
       categoryId: "hutong",
-      name: "宝钞胡同 citywalk",
-      address: "北京市东城区宝钞胡同",
-      bestFor: "『老外就爱钻的胡同』本尊：700 米 8 家小店，咖啡西餐云南菜混着老北京",
-      feature: "本地博主实拍：歪果仁一溜烟拐进小巷拍钟楼，巷子像熨斗能抚平焦虑。",
-      routePairing: "和钟鼓楼、什刹海同一片，适合下午茶时段",
+      name: "Baochao Hutong citywalk 宝钞胡同",
+      address: "Baochao Hutong, Dongcheng, Beijing",
+      bestFor: "'The hutong foreigners love to slip into' — 700 m, 8 small shops: coffee, Cantonese noodles, Yunnan food, a livehouse.",
+      feature: "A local blogger's find: foreigners ducking into a side alley to shoot the Bell Tower; the lane 'irons out your anxiety'.",
+      routePairing: "Same block as the Bell & Drum Towers and Shichahai — perfect for the afternoon-tea slot",
       tags: [
-        "小众",
-        "咖啡",
-        "出片"
+        "hidden gem",
+        "coffee",
+        "photogenic"
       ],
       detailMode: "sequence",
       internalMap: true,
-      playbookIntro: "全程不到 700 米步行 10 分钟，但每家店都能坐：Modernista 的 livehouse、福荣记的粤菜、露华行深的咖啡——这条线的玩法是『慢』。",
-      sourceNote: "小红书 r002（宝钞胡同 citywalk：8 家小店名单+钟楼视角，1898赞/1939收藏）",
+      playbookIntro: "Under 700 m, 10 minutes' walk — but every shop is sit-downable: Modernista's livehouse, 福荣记's Cantonese noodles, 露华行深's coffee. The way to do this lane is slowly.",
+      sourceNote: "Xiaohongshu r002 (Baochao citywalk: 8-shop list + Bell Tower view, 1898 likes / 1939 saves)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "露华行深",
+              label: "Luhua Xingshen 露华行深",
               query: "露华行深 北京",
               linkType: "search",
-              text: "胡同里的咖啡店，博主实拍里最常出现的一家，适合歇脚"
+              text: "The lane's coffee stop — the one that shows up most in the blogger's photos; good for a break"
             },
             {
-              label: "福荣记",
+              label: "Furongji 福荣记",
               query: "福荣记 宝钞胡同",
               linkType: "search",
-              text: "胡同里的粤菜面馆，本地人吃饭首选"
+              text: "Cantonese noodle shop — where the locals actually eat"
             },
             {
-              label: "TBS三明治工坊",
+              label: "TBS Sandwich 三明治工坊",
               query: "TBS三明治 北京",
               linkType: "search",
-              text: "外国面孔常驻的三明治店，适合外国朋友想念西餐时"
+              text: "Sandwich shop with a regular foreign crowd — for when your friends miss Western food"
             }
           ]
         },
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "钟楼视角",
+              label: "Bell Tower view 钟楼视角",
               linkType: "none",
-              text: "西侧小巷望过去『远方的钟楼耸立在眼前』，就是博主说老外都在拍的机位"
+              text: "Look down the western side alley — 『远方的钟楼耸立在眼前』, the framed Bell Tower shot the blogger caught foreigners taking"
             }
           ]
         },
         {
-          title: "商家/顺路",
+          title: "Nearby & Next",
           items: [
             {
               label: "Modernista",
               query: "Modernista 北京",
               linkType: "search",
-              text: "西餐+livehouse 老店，晚上有演出，收尾喝一杯"
+              text: "Old-school Western bar + livehouse; evening shows make it the closing drink"
             }
           ]
         }
@@ -1019,53 +1019,53 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "宝钞胡同南口",
-          kind: "到达",
-          duration: "5 分钟",
+          name: "South entrance 宝钞胡同南口",
+          kind: "Arrive",
+          duration: "5 min",
           googleQuery: "宝钞胡同",
-          action: "从鼓楼东大街拐进宝钞胡同南口向北走，整条线 700 米。",
+          action: "Turn into Baochao Hutong from Gulou East Street and head north; the whole line is 700 m.",
           recommendationGroups: [],
           lat: 39.941604,
           lon: 116.399846
         },
         {
           order: 2,
-          name: "Modernista 等 8 家小店",
-          kind: "逛吃",
-          duration: "1-2 小时",
+          name: "Modernista & the 8 shops",
+          kind: "Eat & browse",
+          duration: "1-2 h",
           googleQuery: "宝钞胡同",
-          action: "沿线 8 家小店按状态选：咖啡（露华行深/彼时）、吃饭（福荣记粤菜/大理人家云南菜）、烘焙（The Bake Shop/TBS三明治）、西餐酒（Toast at the Orchid/Modernista）。",
+          action: "Pick by mood along the lane: coffee (露华行深 / 彼时), meals (福荣记 Cantonese / 大理人家 Yunnan), bakery (The Bake Shop / TBS sandwiches), Western & drinks (Toast at the Orchid / Modernista).",
           recommendationGroups: [
             {
-              title: "吃/喝",
+              title: "Eat & Drink",
               items: [
                 {
-                  label: "彼时",
+                  label: "Bishi 彼时",
                   query: "彼时咖啡 北京",
                   linkType: "search",
-                  text: "白天咖啡晚上酒，本地客为主"
+                  text: "Coffee by day, drinks by night, mostly locals"
                 },
                 {
-                  label: "大理人家",
+                  label: "Dali Renjia 大理人家",
                   query: "大理人家 北京",
                   linkType: "search",
-                  text: "云南菜，想吃米线和菌子时的选项"
+                  text: "Yunnan kitchen — rice noodles and wild mushrooms"
                 },
                 {
                   label: "The Bake Shop",
                   query: "The Bake Shop 北京",
                   linkType: "search",
-                  text: "烘焙小店，买个面包边走边吃"
+                  text: "Tiny bakery — grab a loaf and keep walking"
                 }
               ]
             },
             {
-              title: "提醒",
+              title: "Tips",
               items: [
                 {
-                  label: "营业时间",
+                  label: "Opening hours",
                   linkType: "none",
-                  text: "小店作息不定，想专程去某家先在高德/大众点评确认当天营业"
+                  text: "Small shops keep loose hours — check the name in AMap or Dianping before a special trip"
                 }
               ]
             }
@@ -1075,20 +1075,20 @@ window.TRAVEL_GUIDE = {
         },
         {
           order: 3,
-          name: "钟楼湾",
-          kind: "观景收尾",
-          duration: "20-30 分钟",
+          name: "Zhonglouwan 钟楼湾",
+          kind: "View & finish",
+          duration: "20-30 min",
           googleQuery: "北京钟楼",
-          action: "从西侧小巷穿出正对钟楼拍照，走到钟鼓楼广场看大爷踢毽下棋，接什刹海或鼓楼东大街。",
+          action: "Cut through the western alley for the framed Bell Tower shot, then linger on Zhong-Gulou square — old men kicking shuttlecocks — before Shichahai or Gulou East Street.",
           recommendationGroups: [
             {
-              title: "看/拍",
+              title: "See & Shoot",
               items: [
                 {
-                  label: "钟楼",
+                  label: "Bell Tower 钟楼",
                   query: "北京钟楼",
                   linkType: "exact",
-                  text: "巷口框景拍钟楼是这条线的标志性照片"
+                  text: "The alley-framed Bell Tower is this walk's signature photo"
                 }
               ]
             }
@@ -1103,7 +1103,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9402,
         lon: 116.3936
       },
-      distance: "距王府井直线约 3.0 km",
+      distance: "~3.0 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1114,61 +1114,61 @@ window.TRAVEL_GUIDE = {
     {
       id: "qianmen",
       categoryId: "hutong",
-      name: "前门大街·大栅栏",
-      address: "北京市西城区前门大街",
-      bestFor: "买伴手礼的主场：张一元、六必居、稻香村零号店都在步行圈",
-      feature: "正阳门下的老商业街——小吃、铛铛车、老字号一条龙。",
-      routePairing: "天安门以南步行可达，和天坛同日顺路",
+      name: "Qianmen St · Dashilan 前门大街·大栅栏",
+      address: "Qianmen Street, Xicheng, Beijing",
+      bestFor: "Souvenir headquarters: Zhang Yiyuan tea, Liubiju pickles and the Daoxiangcun flagship all within a walk.",
+      feature: "The old shopping street under the Zhengyangmen gate — snacks, the dangdang tram, heritage brands in one line.",
+      routePairing: "Walkable south of Tian'anmen; pairs with Temple of Heaven day",
       tags: [
-        "伴手礼",
-        "老字号",
-        "小吃街"
+        "souvenirs",
+        "heritage shops",
+        "food street"
       ],
       detailMode: "compact",
-      playbookIntro: "把『离京前的购物清单』放在这里一次解决：茶叶、酱菜、糕点、茶饼干都是被反复安利的带得走的北京味。",
-      sourceNote: "小红书 r027（十大伴手礼图集：张一元/六必居/稻香村零号店/吴裕泰，10图全读）、r028（前门小吃街：烤鸭/酸奶/糕点）",
+      playbookIntro: "Solve your entire 'gifts to take home' list here in one pass: tea, pickles, pastry and tea cookies — all the repeatedly recommended carry-on-able Beijing flavors.",
+      sourceNote: "Xiaohongshu r027 (top-10 souvenirs: 张一元/六必居/稻香村零号店/吴裕泰, all 10 images read), r028 (Qianmen food street: duck/yogurt/pastry)",
       playbookGroups: [
         {
-          title: "买/带走",
+          title: "Buy & Take",
           items: [
             {
-              label: "张一元（前门总店）",
+              label: "Zhang Yiyuan 张一元 (Qianmen flagship)",
               query: "张一元 前门",
               linkType: "exact",
-              text: "茉莉花茶老字号，伴手礼买『茉莉小珍珠』这类听装；旁边吴裕泰的抹茶、茉莉茶饼干小罐装同样便宜好带"
+              text: "Jasmine-tea house — gift the tinned 茉莉小珍珠 pearls; next door 吴裕泰's matcha and jasmine tea cookies 茶饼干 are cheap and packable too"
             },
             {
-              label: "六必居",
+              label: "Liubiju 六必居",
               query: "六必居 前门",
               linkType: "exact",
-              text: "明代酱菜老号，酱牛肉和小罐酱菜礼盒带得走"
+              text: "Ming-dynasty pickle house — braised beef and small jarred pickle gift boxes travel well"
             },
             {
-              label: "北京稻香村零号店",
+              label: "Daoxiangcun No.0 稻香村零号店",
               query: "北京稻香村零号店",
               linkType: "search",
-              text: "创意京式糕点排队店，枣花酥和『点心局』系列当伴手礼最受欢迎"
+              text: "The queue-worthy creative flagship — jujube pastry 枣花酥 and the 点心局 series make the best-received gifts"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "前门小吃街",
+              label: "Qianmen food street 前门小吃街",
               linkType: "none",
-              text: "烤鸭、老北京酸奶、糕点边走边吃；酸奶喝完瓶子要退还摊主"
+              text: "Roast duck, old-Beijing yogurt 老北京酸奶 and pastries as you walk; return the yogurt jar to the stall"
             }
           ]
         },
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "正阳门+铛铛车",
+              label: "Zhengyangmen 正阳门 + tram",
               query: "正阳门",
               linkType: "exact",
-              text: "城楼前拍铛铛车驶过的复古照片，傍晚亮灯后更好看"
+              text: "Catch the dangdang tram 铛铛车 passing under the gate tower — better after the lights come on"
             }
           ]
         }
@@ -1176,11 +1176,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "前门大街、大栅栏",
-          kind: "逛买",
-          duration: "2-3 小时",
+          name: "Qianmen St & Dashilan 前门大街、大栅栏",
+          kind: "Stroll & shop",
+          duration: "2-3 h",
           googleQuery: "前门大街",
-          action: "正阳门下从北往南逛主街买伴手礼，拐进大栅栏看老药铺布鞋店；吃的在两侧支巷更地道。",
+          action: "Walk south from the gate buying gifts on the main street, duck into Dashilan for the old apothecaries and cloth-shoe shops; the better food hides in the side lanes.",
           recommendationGroups: [],
           lat: 39.889301,
           lon: 116.398239
@@ -1192,7 +1192,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.8879,
         lon: 116.392
       },
-      distance: "距王府井直线约 3.2 km",
+      distance: "~3.2 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1203,42 +1203,42 @@ window.TRAVEL_GUIDE = {
     {
       id: "niujie",
       categoryId: "food",
-      name: "牛街清真街",
-      address: "北京市西城区牛街",
-      bestFor: "本地人公认性价比最高的小吃街之一：清真涮肉+糯食",
-      feature: "英文夜市攻略里 Best value 担当——羊肉火锅、糯米小吃集中地。",
-      routePairing: "单独半顿饭行程；可与天坛/大栅栏打车串联",
+      name: "Niujie Halal Street 牛街清真街",
+      address: "Niujie, Xicheng, Beijing",
+      bestFor: "Locals' pick for best value: halal copper-pot lamb hotpot and sticky-rice sweets.",
+      feature: "The 'best value' entry in the English night-food guides — lamb hotpot and glutinous snacks concentrated on one street.",
+      routePairing: "A meal-trip on its own; taxi-pairs with Temple of Heaven or Dashilan",
       tags: [
-        "清真",
-        "性价比",
-        "本地人多"
+        "halal",
+        "best value",
+        "local crowd"
       ],
       detailMode: "compact",
-      playbookIntro: "游客少本地人多：来这里的目标是清真涮羊肉和门口排队的糯食铺子，按队伍长短选店基本不会错。",
-      sourceNote: "小红书 r028（六大夜市街：牛街=halal/lamb hot pot/glutinous rice snacks，Best value: Niujie）",
+      playbookIntro: "Few tourists, many locals. Come for copper-pot lamb 涮羊肉 and whichever sticky-rice stall has the longest queue — queue length is the menu here.",
+      sourceNote: "Xiaohongshu r028 (six food streets: Niujie = halal / lamb hotpot / glutinous snacks; best value Niujie & Longfusi)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "涮羊肉",
+              label: "Lamb hotpot 涮羊肉",
               linkType: "none",
-              text: "羊肉火锅、涮羊肉的铜锅是牛街正餐主角，人均不高"
+              text: "羊肉火锅、涮羊肉 in copper pots is the main event — modest prices, great for introducing visitors to gather-round-the-pot dining"
             },
             {
-              label: "糯米小吃",
+              label: "Sticky-rice snacks 糯米小吃",
               linkType: "none",
-              text: "驴打滚、年糕这类糯食在街边铺子按个买，哪家排队买哪家"
+              text: "驴打滚 and rice cakes sold by the piece at street shops — buy from whichever has a queue"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "性价比",
+              label: "Best value",
               linkType: "none",
-              text: "牛街、隆福寺：英文攻略眼里性价比最高的两条本地小吃街"
+              text: "牛街、隆福寺 are the two streets English guides rank best-value for local food"
             }
           ]
         }
@@ -1246,11 +1246,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "牛街",
-          kind: "逛吃",
-          duration: "1.5-2 小时",
+          name: "Niujie 牛街",
+          kind: "Eat",
+          duration: "1.5-2 h",
           googleQuery: "牛街",
-          action: "沿牛街主路逛，正餐进涮肉馆，小吃跟着本地人的队伍买。",
+          action: "Walk the main street; hotpot houses for the meal, queues for the snacks.",
           recommendationGroups: [],
           lat: 39.886264,
           lon: 116.363695
@@ -1262,7 +1262,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.8849,
         lon: 116.3575
       },
-      distance: "距王府井直线约 5.2 km",
+      distance: "~5.2 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1273,42 +1273,43 @@ window.TRAVEL_GUIDE = {
     {
       id: "guijie",
       categoryId: "food",
-      name: "簋街 · 24 小时夜宵",
-      address: "北京市东城区东直门内大街",
-      bestFor: "深夜还想吃的唯一答案：麻辣小龙虾 24 小时不打烊",
-      feature: "一条街全是红灯笼大排档——小龙虾、烤鱼、麻辣香锅的主场。",
-      routePairing: "雍和宫向南打车 5 分钟；长城回城后的夜宵局",
+      name: "Gui Street · 24h 簋街",
+      address: "Dongzhimen Inner St, Dongcheng, Beijing",
+      bestFor: "The only answer when you're hungry after midnight: spicy crayfish around the clock.",
+      feature: "A street of red lanterns and big tables — crayfish, grilled fish and spicy pots, 24 hours.",
+      routePairing: "5 minutes south of the Lama Temple by taxi; the supper stop after a Great Wall day",
       tags: [
-        "24小时",
-        "小龙虾",
-        "夜宵"
+        "24 hours",
+        "crayfish",
+        "late night"
       ],
       detailMode: "compact",
-      playbookIntro: "带外国朋友来这里的正确姿势：点麻辣小龙虾+烤鱼双主角，教他们戴手套剥虾，辣度提前说『微辣』。",
-      sourceNote: "小红书 r028（Guijie: Spicy crayfish, crab, grilled fish, 24/7 营业）",
+      playbookIntro: "The move with foreign friends: order 麻辣小龙虾 + grilled fish as twin mains, teach the gloves-on peel, and say 微辣 (mild) up front.",
+      sourceNote: "Xiaohongshu r028 (Guijie: spicy crayfish, crab, grilled fish, 24/7), r022 ('Bu la' ordering tip)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "麻辣小龙虾",
+              label: "Spicy crayfish 麻辣小龙虾",
+              query: "",
               linkType: "none",
-              text: "簋街招牌，按斤点；外国朋友怕辣就蒜蓉和麻辣各来一份"
+              text: "The street's signature, ordered by the jin; scared of spice? get garlic 蒜蓉 and spicy 麻辣 half-half"
             },
             {
-              label: "烤鱼",
+              label: "Grilled fish 烤鱼",
               linkType: "none",
-              text: "麻辣小龙虾、烤鱼是簋街双主角；炭火烤鱼配宽粉是稳妥主食"
+              text: "麻辣小龙虾、烤鱼 are the twin stars — charcoal fish over glass noodles is the reliable main"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "辣度",
+              label: "Spice level",
               linkType: "none",
-              text: "簋街、深夜档默认偏辣，点单先说『微辣』（英文笔记教的 Bu la）；取号后可在街上逛"
+              text: "簋街 default heat runs hot for foreign palates — say 微辣 (the English notes teach 'Bu la' for none); take a queue number and wander the lanterns"
             }
           ]
         }
@@ -1316,11 +1317,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "簋街",
-          kind: "夜宵",
-          duration: "1.5-2 小时",
+          name: "Gui Street 簋街",
+          kind: "Supper",
+          duration: "1.5-2 h",
           googleQuery: "簋街",
-          action: "东直门内大街从东往西挑店，红灯笼越密人越多的位置越热闹。",
+          action: "Pick along Dongzhimen Inner Street east to west — the denser the lanterns and crowds, the livelier the house.",
           recommendationGroups: [],
           lat: 39.940996,
           lon: 116.429534
@@ -1332,7 +1333,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9396,
         lon: 116.4233
       },
-      distance: "距王府井直线约 3.2 km",
+      distance: "~3.2 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1343,47 +1344,47 @@ window.TRAVEL_GUIDE = {
     {
       id: "xingfu",
       categoryId: "food",
-      name: "幸福大街·本地早市",
-      address: "北京市东城区幸福大街",
-      bestFor: "『Not for tourists』的本地早市：20 元吃饱一上午",
-      feature: "英文博主实测推荐——菜团子、羊杂汤、现包水饺，居民买菜的真实北京。",
-      routePairing: "早市→天坛东门进园，一上午完整动线",
+      name: "Xingfu St Morning Market 幸福大街·本地早市",
+      address: "Xingfu Street, Dongcheng, Beijing",
+      bestFor: "'Not for tourists': a real residents' market, full breakfast for about ¥20.",
+      feature: "An English blogger's field find — corn buns, lamb offal soup, fresh-wrapped dumplings; the Beijing locals actually live in.",
+      routePairing: "Market first, then enter Temple of Heaven by the east gate — one full morning",
       tags: [
-        "早市",
-        "13点前",
-        "本地"
+        "morning market",
+        "before 1 pm",
+        "local"
       ],
       detailMode: "compact",
-      playbookIntro: "上午来：多数摊位 13 点前收摊。座位少，按『边走边吃』准备；想猎奇选羊杂汤，稳妥选菜团子和水饺。",
-      sourceNote: "小红书 r025（幸福大街本地早市：菜团子/羊杂汤/猪肉玉米饺/凉皮/煎饼，¥20 吃饱，13点前收摊，105赞英文笔记）",
+      playbookIntro: "Come in the morning: most stalls close by 1 pm. Few seats — plan to eat as you walk. Adventurous? lamb offal soup. Safe? corn buns and dumplings.",
+      sourceNote: "Xiaohongshu r025 (Xingfu St market: 菜团子/羊杂汤/猪肉玉米饺/凉皮/煎饼, ~¥20, closes by 1 pm — 105-like English note)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "菜团子",
+              label: "Corn buns 菜团子",
               linkType: "none",
-              text: "玉米面菜团子，博主首推，热乎的先买"
+              text: "玉米面菜团子 — the blogger's top pick; buy them hot"
             },
             {
-              label: "水饺摊",
+              label: "Dumpling stall 水饺摊",
               linkType: "none",
-              text: "水饺摊推荐猪肉玉米馅，现包现煮；凉皮、煎饼也是现做"
+              text: "水饺摊推荐猪肉玉米馅 — pork & corn, wrapped and boiled on the spot; 凉皮、煎饼 are made fresh too"
             },
             {
-              label: "羊杂汤",
+              label: "Lamb offal soup 羊杂汤",
               linkType: "none",
-              text: "猎奇向、想挑战的点羊杂汤，接受度两极但话题感拉满"
+              text: "猎奇向 — the dare dish: love-or-hate, but maximum talking points"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "营业时间",
+              label: "Hours",
               linkType: "none",
-              text: "早市属性，13 点前收摊；具体市场位置进街后跟着拎菜的本地人走，或高德搜『幸福大街 菜市场』"
+              text: "It's a morning market — stalls wind down by 1 pm. Follow locals with shopping bags to the entrance, or search 幸福大街 菜市场 in AMap"
             }
           ]
         }
@@ -1391,11 +1392,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "幸福大街早市",
-          kind: "早餐",
-          duration: "40-60 分钟",
+          name: "Xingfu St market 幸福大街早市",
+          kind: "Breakfast",
+          duration: "40-60 min",
           googleQuery: "幸福大街 菜市场",
-          action: "上午到，沿街找最热闹的市场入口，边走边吃一轮后步行去天坛东门。",
+          action: "Arrive in the morning, find the busiest entrance, graze a full round, then walk to the Temple of Heaven east gate.",
           recommendationGroups: [],
           lat: 39.891494,
           lon: 116.428829
@@ -1407,7 +1408,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.8901,
         lon: 116.4226
       },
-      distance: "距王府井直线约 3.1 km",
+      distance: "~3.1 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1418,48 +1419,48 @@ window.TRAVEL_GUIDE = {
     {
       id: "wangfujing",
       categoryId: "food",
-      name: "王府井（小吃街+京剧晚场）",
-      address: "北京市东城区王府井大街",
-      bestFor: "市中心晚间一站式：小吃打卡+吉祥大戏院看一折京剧",
-      feature: "糖葫芦煎饼烤蝎子猎奇小吃，加一场对零中文外国人也成立的京剧。",
-      routePairing: "住市中心的晚间默认选项，离故宫步行可达",
+      name: "Wangfujing 王府井 (snacks + Peking opera)",
+      address: "Wangfujing Street, Dongcheng, Beijing",
+      bestFor: "One-stop city-center evening: snack street plus one act of Peking opera at Jixiang Theatre.",
+      feature: "Candied hawthorn, jianbing and dare-you scorpions — then an opera that works even with zero Chinese.",
+      routePairing: "The default evening if you stay central; walking distance from the Forbidden City",
       tags: [
-        "市中心",
-        "京剧",
-        "夜逛"
+        "city center",
+        "Peking opera",
+        "evening"
       ],
       detailMode: "compact",
-      playbookIntro: "实测可行的组合：傍晚小吃街开吃，晚上进吉祥大戏院看折子戏——博主带完全不懂中文的俄罗斯朋友看完仍『赞不绝口』。",
-      sourceNote: "小红书 r069（吉祥大戏院《秦琼卖马》《朱砂痣》带俄罗斯朋友实测）、r070（出现中英双语字幕场次）、r028（王府井小吃街：糖葫芦/煎饼/烤蝎子）",
+      playbookIntro: "A field-tested combo: snack street at dusk, then into 吉祥大戏院 for highlight scenes — a blogger took a zero-Chinese Russian friend who raved anyway.",
+      sourceNote: "Xiaohongshu r069 (Jixiang Theatre with a Russian friend), r070 (bilingual subtitle shows appearing), r028 (Wangfujing snack street)",
       playbookGroups: [
         {
-          title: "玩",
+          title: "Play",
           items: [
             {
-              label: "吉祥大戏院",
+              label: "Jixiang Theatre 吉祥大戏院",
               query: "吉祥大戏院",
               linkType: "exact",
-              text: "王府井里的百年戏院，挑折子戏专场看一两出；现在部分场次配中英双语字幕，带外国朋友零门槛"
+              text: "Century-old theatre inside Wangfujing — pick a highlights program of one or two scenes; some shows now run Chinese-English subtitles 双语字幕, zero-barrier for guests"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "王府井小吃街",
+              label: "Snack street 王府井小吃街",
               linkType: "none",
-              text: "糖葫芦和煎饼是稳妥款；烤蝎子属于猎奇打卡，拍照意义大于味道"
+              text: "糖葫芦 and 煎饼 are the safe picks; 烤蝎子 scorpions are a photo-first dare"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "演出场次",
+              label: "Show times",
               linkType: "none",
-              text: "吉祥大戏院、京剧场次提前确认；双语字幕场要提前买票"
+              text: "吉祥大戏院、京剧 schedules — confirm dates ahead; subtitle shows and weekend slots sell out early 买票"
             }
           ]
         }
@@ -1467,11 +1468,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "王府井步行街",
-          kind: "夜逛+演出",
-          duration: "2-3 小时",
+          name: "Wangfujing 王府井",
+          kind: "Evening",
+          duration: "2-3 h",
           googleQuery: "王府井",
-          action: "傍晚逛步行街和小吃街，按开场时间进吉祥大戏院；散场后步行或打车回住地。",
+          action: "Browse the pedestrian street and snack alley at dusk, enter the theatre by curtain time; walk or taxi home after.",
           recommendationGroups: [],
           lat: 39.916204,
           lon: 116.411344
@@ -1483,7 +1484,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9148,
         lon: 116.4051
       },
-      distance: "距王府井直线约 0.0 km",
+      distance: "~0.0 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1494,47 +1495,47 @@ window.TRAVEL_GUIDE = {
     {
       id: "qingsong",
       categoryId: "food",
-      name: "青松别院·日坛公园旁",
-      address: "北京市朝阳区日坛公园旁",
-      bestFor: "人均 80 的『米其林水准』四合院京菜——格格装与外国客人一起排队",
-      feature: "推开朱红木门锦鲤庭院，炸酱面和酥不腻烤鸭都被点名。",
-      routePairing: "使馆区/CBD 顺路；与 798 同方向可串联",
+      name: "Qingsong Bieyuan 青松别院·日坛公园旁",
+      address: "Beside Ritan Park, Chaoyang, Beijing",
+      bestFor: "'Michelin-level' courtyard Beijing food at ~¥80 a head — staff in Qing costume, foreigners in the queue.",
+      feature: "Push open the red wooden gate to koi and a courtyard; the zhajiang noodles and crispy duck are the named dishes.",
+      routePairing: "Handy to the embassy district/CBD; same direction as 798",
       tags: [
-        "四合院",
-        "人均80",
-        "排队"
+        "courtyard",
+        "~¥80 pp",
+        "queues"
       ],
       detailMode: "compact",
-      playbookIntro: "想让外国朋友一顿饭看完『庭院+京菜』就来这里：招牌炸酱面+酥不腻烤鸭组合人均不到一只烤鸭店的零头。",
-      sourceNote: "小红书 r054（青松别院：黑猪肉炸酱面/安格斯牛肋条炸酱面/京院酥不腻烤鸭蘸白糖/炙子沙葱烤肥牛/老北京爆肚/虾汤柴火豆腐，389赞）",
+      playbookIntro: "One meal that shows guests 'courtyard + Beijing cuisine' in a single sitting: signature zhajiang noodles + crispy 酥不腻 duck for a fraction of a duck-house bill.",
+      sourceNote: "Xiaohongshu r054 (青松别院: 黑猪肉炸酱面/京院酥不腻烤鸭蘸白糖/炙子沙葱烤肥牛/老北京爆肚, 389 likes)",
       playbookGroups: [
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "京院酥不腻烤鸭",
+              label: "Crispy duck 京院酥不腻烤鸭",
               linkType: "none",
-              text: "鸭皮蘸白糖入口即化，米其林水准但价格亲民"
+              text: "Duck skin dipped in white sugar 蘸白糖, melts on contact — Michelin-level at neighborhood prices"
             },
             {
-              label: "黑猪肉炸酱面",
+              label: "Black-pork zhajiang noodles 黑猪肉炸酱面",
               linkType: "none",
-              text: "和安格斯牛肋条炸酱面二选一，肉香裹满筋道面条"
+              text: "Or the Angus-rib version — rich sauce over chewy noodles"
             },
             {
-              label: "炙子沙葱烤肥牛",
+              label: "Griddled beef 炙子沙葱烤肥牛",
               linkType: "none",
-              text: "配老北京爆肚和虾汤柴火豆腐，一桌京味全齐；收尾点话梅小番茄解腻"
+              text: "Plus 老北京爆肚 tripe and shrimp-broth tofu — one table covers the Beijing canon; finish with plum-soaked tomatoes"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "排队",
+              label: "Queues",
               linkType: "none",
-              text: "格格装小姐姐和外国人都在排队，建议错峰或先取号，等位时去日坛公园转一圈"
+              text: "格格装小姐姐和外国人都在排队 — costumed staff and foreign guests alike; go off-peak or take a number and stroll Ritan Park 日坛公园 while you wait"
             }
           ]
         }
@@ -1542,11 +1543,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "青松别院",
-          kind: "正餐",
-          duration: "1.5 小时",
+          name: "Qingsong Bieyuan 青松别院",
+          kind: "Meal",
+          duration: "1.5 h",
           googleQuery: "青松别院 北京",
-          action: "高德搜『青松别院』确认到店；饭后可在日坛公园消食。",
+          action: "Search 青松别院 in AMap to confirm the door; walk it off in Ritan Park after.",
           recommendationGroups: [],
           lat: 39.915577,
           lon: 116.443608
@@ -1558,7 +1559,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9142,
         lon: 116.4374
       },
-      distance: "距王府井直线约 2.8 km",
+      distance: "~2.8 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1569,97 +1570,97 @@ window.TRAVEL_GUIDE = {
     {
       id: "art798",
       categoryId: "modern",
-      name: "798 艺术区",
-      address: "北京市朝阳区酒仙桥路4号",
-      bestFor: "看展+拍照+淘小店的下午；离首都机场近，航班前 1 小时也能逛精华",
-      feature: "包豪斯厂房里的当代艺术：UCCA、遇见博物馆加涂鸦墙火车头。",
-      routePairing: "与青松别院/使馆区同方向；机场顺路最后一站",
+      name: "798 Art Zone 798艺术区",
+      address: "4 Jiuxianqiao Rd, Chaoyang, Beijing",
+      bestFor: "An afternoon of exhibitions, photos and small shops; 20 minutes from the airport — even a 1-hour layover-ish visit works.",
+      feature: "Contemporary art in Bauhaus factory halls: UCCA and M WOODS-scale shows plus graffiti walls and the locomotive square.",
+      routePairing: "Same direction as Qingsong Bieyuan / embassy district; the natural last stop before the airport",
       tags: [
-        "看展",
-        "出片",
-        "机场顺路"
+        "exhibitions",
+        "photogenic",
+        "near airport"
       ],
       detailMode: "compact",
       internalMap: false,
-      actionSummary: "主干线：地铁高家园站 A 口/打车到酒仙桥路西 4 门进园 → 现代汽车文化中心涂鸦墙 → 遇见博物馆 → UCCA → 包豪斯广场 → 火车头广场；极速 1 小时，完整逛+看展约 4 小时。",
-      playbookIntro: "三个版本按时间选：1 小时极速主干线、4 小时完整线、或挑一个大展泡半天；园内按路牌和导览图走，店和馆都用高德搜名字即可。",
-      sourceNote: "小红书 r085（核心路线 2163赞）、r082（下午citywalk 3356赞：机位+小店+吃）、r083（1小时极速线+机场区位）、r086（免费展）",
+      actionSummary: "Main line: metro to Gaojiayuan station exit A or taxi to West Gate 4 on Jiuxianqiao Rd → Hyundai art center graffiti wall → 遇见博物馆 → UCCA → Bauhaus square 包豪斯广场 → locomotive square 火车头广场. Express 1 h; full visit with one show ~4 h.",
+      playbookIntro: "Three versions by time: 1-hour express trunk line, 4-hour full wander, or camp half a day in one big show. Navigate inside by the park signboards; search shops and halls by name in AMap.",
+      sourceNote: "Xiaohongshu r085 (core route, 2163 likes), r082 (afternoon citywalk 3356 likes: spots+shops+food), r083 (1-hour express + airport position), r086 (free shows)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "UCCA尤伦斯当代艺术中心",
+              label: "UCCA 尤伦斯当代艺术中心",
               query: "UCCA尤伦斯当代艺术中心",
               linkType: "exact",
-              text: "中国当代艺术地标，工业风建筑+先锋布展，按当期展览决定是否买票"
+              text: "China's flagship contemporary-art center — industrial halls, first-rate curation; ticket by current show"
             },
             {
-              label: "遇见博物馆",
+              label: "M WOODS-style hits 遇见博物馆",
               query: "遇见博物馆 北京798",
               linkType: "search",
-              text: "沉浸式大展扛把子（莫奈/梵高级引进展常驻），热门展提前线上购票"
+              text: "The blockbuster immersive-show museum (Monet/van Gogh-grade imports live here); book hot shows online ahead"
             },
             {
-              label: "火车头广场",
+              label: "Locomotive square 火车头广场",
               query: "798火车头广场",
               linkType: "search",
-              text: "墨绿色老火车头+复古车厢，798 标志性出片位"
+              text: "The dark-green steam engine and vintage carriages — 798's signature photo spot"
             }
           ]
         },
         {
-          title: "吃/喝",
+          title: "Eat & Drink",
           items: [
             {
-              label: "激流岛",
+              label: "Jiliu Island 激流岛",
               query: "激流岛蛋糕 798",
               linkType: "search",
-              text: "法式蛋糕店，巴斯克出名，五扇拱形落地窗采光绝佳；进园先拍现代汽车文化中心的涂鸦大墙再过来"
+              text: "French-style cake shop famous for Basque cheesecake, five arched windows of light; shoot the Hyundai graffiti wall before coming over"
             },
             {
-              label: "墨爷麻辣烫",
+              label: "Moye Malatang 墨爷麻辣烫",
               query: "墨爷麻辣烫",
               linkType: "search",
-              text: "园区里被点名的麻辣烫，逛累了的正餐补给"
+              text: "The park's name-checked malatang — the refuel stop when your feet give out"
             }
           ]
         },
         {
-          title: "买/带走",
+          title: "Buy & Take",
           items: [
             {
               label: "Spring Cameras",
               query: "Spring Cameras 798",
               linkType: "search",
-              text: "复古胶片相机和胶卷，摄影爱好者会逛很久"
+              text: "Vintage film cameras and rolls — photographers disappear in here"
             },
             {
-              label: "五十六朵花艺术空间",
+              label: "56 Flowers 五十六朵花",
               query: "五十六朵花 798",
               linkType: "search",
-              text: "手工玩具和民族风小物，礼物属性强"
+              text: "Handmade toys and folk-style small things — strong gift material"
             },
             {
-              label: "猫的行李箱",
+              label: "Cat's Suitcase 猫的行李箱",
               query: "猫的行李箱 798",
               linkType: "search",
-              text: "精致小物店，门口本身就是拍照点"
+              text: "Precious little objects; the storefront itself is a photo stop"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "时间预算",
+              label: "Time budget",
               linkType: "none",
-              text: "极速 1 小时只走主干道；完整逛+看一个展约 4 小时；很多小展免费，撞到什么看什么"
+              text: "Express 1 h covers only the trunk line; full wander + one show ≈ 4 h; many small shows are free — see what you bump into"
             },
             {
-              label: "机场顺路",
+              label: "Airport hack",
               linkType: "none",
-              text: "798 离首都机场约 20 分钟车程，回国航班前的空档可以来走 1 小时极速线"
+              text: "798 is ~20 min from Capital Airport — the 1-hour express line fits before an evening flight out"
             }
           ]
         }
@@ -1667,11 +1668,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "798 艺术区（西4门）",
-          kind: "到达",
-          duration: "1-4 小时",
+          name: "798 Art Zone (West Gate 4) 798艺术区",
+          kind: "Arrive",
+          duration: "1-4 h",
           googleQuery: "798艺术区",
-          action: "西 4 门进园走主干线：现代汽车文化中心→遇见博物馆→UCCA→包豪斯广场→火车头广场；遇见博物馆热门展提前线上购票，树上咖啡在 UCCA 马路对面可歇脚。",
+          action: "Enter at West Gate 4 and walk the trunk line: Hyundai graffiti wall → 遇见博物馆 → UCCA → Bauhaus square → locomotive square; book hot shows ahead; 树上咖啡's rooftop opposite UCCA for a break.",
           recommendationGroups: [],
           lat: 39.984053,
           lon: 116.496552
@@ -1683,7 +1684,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9828,
         lon: 116.4905
       },
-      distance: "距王府井直线约 10 km",
+      distance: "~10 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1694,44 +1695,44 @@ window.TRAVEL_GUIDE = {
     {
       id: "olympic",
       categoryId: "modern",
-      name: "奥林匹克公园（鸟巢·水立方）",
-      address: "北京市朝阳区国家体育场",
-      bestFor: "顺路打卡：鸟巢水立方外观拍照，两馆步行 5 分钟",
-      feature: "2008 奥运双地标，外国攻略普遍排在长城回程或颐和园同日。",
-      routePairing: "长城/颐和园回城顺路打卡",
+      name: "Olympic Park 奥林匹克公园 (Bird's Nest · Water Cube)",
+      address: "National Stadium, Chaoyang, Beijing",
+      bestFor: "Drive-by icons: shoot the Bird's Nest and Water Cube exteriors, 5 minutes' walk apart.",
+      feature: "The 2008 twin landmarks; guides slot them on the way back from the Great Wall or after the Summer Palace.",
+      routePairing: "On the way back from the Wall / Summer Palace",
       tags: [
-        "免费外观",
-        "顺路",
-        "拍照"
+        "free exterior",
+        "en route",
+        "photos"
       ],
       detailMode: "compact",
-      playbookIntro: "看外观不用买票：在中轴广场两馆之间走一圈拍照即可，前后 1 小时内解决。",
-      sourceNote: "小红书 r017（Bird's Nest/Water Cube 步行5分钟+长城日收尾）、r044（行程位置）",
+      playbookIntro: "No tickets needed for the exteriors: loop the central plaza between the two venues with a camera — under an hour total.",
+      sourceNote: "Xiaohongshu r017 (Bird's Nest/Water Cube 5-min walk + Wall-day slot), r044 (itinerary slot)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "鸟巢",
+              label: "Bird's Nest 鸟巢",
               query: "鸟巢 国家体育场",
               linkType: "exact",
-              text: "和水立方同框拍外观是标准构图，两馆步行 5 分钟"
+              text: "Frame it with the Water Cube — the standard two-icon shot, 5 minutes' walk apart"
             },
             {
-              label: "水立方",
+              label: "Water Cube 水立方",
               query: "水立方",
               linkType: "exact",
-              text: "从鸟巢走 5 分钟就到，外观拍照即可"
+              text: "5 minutes from the Nest; the bubble facade reads best from the plaza"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "顺路安排",
+              label: "En-route stop",
               linkType: "none",
-              text: "鸟巢、水立方、长城回程或颐和园同日顺路看外观即可，不必单独留半天"
+              text: "鸟巢、水立方、长城回程或颐和园同日顺路 — exteriors are the point; no need to reserve half a day"
             }
           ]
         }
@@ -1739,11 +1740,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "奥林匹克公园（鸟巢·水立方）",
-          kind: "打卡",
-          duration: "40-60 分钟",
+          name: "Olympic Park 奥林匹克公园 (Bird's Nest · Water Cube)",
+          kind: "Photo stop",
+          duration: "40-60 min",
           googleQuery: "奥林匹克公园",
-          action: "地铁 8 号线奥体中心站出，鸟巢→水立方走一圈拍照。",
+          action: "Metro Line 8 to Olympic Sports Center; loop Bird's Nest → Water Cube with the camera out.",
           recommendationGroups: [],
           lat: 39.992804,
           lon: 116.396551
@@ -1755,7 +1756,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9914,
         lon: 116.3903
       },
-      distance: "距王府井直线约 8.6 km",
+      distance: "~8.6 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1766,38 +1767,38 @@ window.TRAVEL_GUIDE = {
     {
       id: "natmuseum",
       categoryId: "indoor",
-      name: "国家博物馆·天安门东",
-      address: "北京市东城区东长安街16号",
-      bestFor: "免费的国家级大馆：雨天/酷暑首选，配天安门同日",
-      feature: "外国攻略必去清单常客，免费但票比故宫还难抢。",
-      routePairing: "天安门广场东侧，和故宫/天安门排同一天",
+      name: "National Museum 国家博物馆·天安门东",
+      address: "16 East Chang'an Ave, Dongcheng, Beijing",
+      bestFor: "Free national-grade museum: first choice for rain or heat; pairs with Tian'anmen day.",
+      feature: "A fixture on foreigner must-see lists — free, but tickets are harder to grab than the Forbidden City's.",
+      routePairing: "East side of Tian'anmen Square — same day as the square / Forbidden City",
       tags: [
-        "免费",
-        "提前7天约",
-        "周一闭馆"
+        "free",
+        "book 7 days ahead",
+        "closed Mondays"
       ],
       detailMode: "compact",
-      playbookIntro: "免费但票比故宫还难抢：提前 7 天下午 17:00 放票，约不上就把室内备份换成西什库教堂或商场。",
-      sourceNote: "小红书 r046（免费/7天前17:00放票/周一闭馆）、r044（Day1 与天安门同日）、r013（国家博物馆预约同流程）",
+      playbookIntro: "Free but fiercely booked: tickets drop 7 days ahead at 17:00. If you miss out, swap your indoor backup to Xishiku Cathedral or a mall.",
+      sourceNote: "Xiaohongshu r046 (free / 7-day 17:00 release / closed Mon), r044 (Day-1 with Tian'anmen), r013 (same booking flow)",
       playbookGroups: [
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "抢票",
+              label: "Tickets",
               linkType: "none",
-              text: "提前 7 天 17:00 微信小程序放票，护照可约；周一闭馆；安检不能带大包"
+              text: "Released 7 days ahead at 17:00 on the WeChat mini-program, passports accepted; closed Mondays; no large bags through security"
             }
           ]
         },
         {
-          title: "商家/顺路",
+          title: "Nearby & Next",
           items: [
             {
-              label: "天安门",
+              label: "Tian'anmen 天安门",
               query: "天安门广场",
               linkType: "exact",
-              text: "天安门、国博就在同一个广场，和故宫排同一天最顺"
+              text: "天安门、国博 share the square — stack them with the Forbidden City on one day"
             }
           ]
         }
@@ -1805,11 +1806,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "国家博物馆",
-          kind: "看展",
-          duration: "2-3 小时",
+          name: "National Museum 国家博物馆",
+          kind: "Exhibitions",
+          duration: "2-3 h",
           googleQuery: "中国国家博物馆",
-          action: "提前约票后从西门安检进馆，留 2-3 小时按兴趣挑展厅。",
+          action: "Book ahead, enter by the west gate after security, and give it 2-3 hours by interest.",
           recommendationGroups: [],
           lat: 39.905103,
           lon: 116.401642
@@ -1821,7 +1822,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9037,
         lon: 116.3954
       },
-      distance: "距王府井直线约 1.5 km",
+      distance: "~1.5 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",
@@ -1832,38 +1833,38 @@ window.TRAVEL_GUIDE = {
     {
       id: "xishiku",
       categoryId: "indoor",
-      name: "西什库教堂",
-      address: "北京市西城区西什库大街33号",
-      bestFor: "免费的中西合璧哥特教堂：彩窗+中式碑亭同框，雨天小众备用",
-      feature: "本地高赞免费清单里的『北京最美教堂』，周末可静坐听圣歌。",
-      routePairing: "在北海西侧，和北海/什刹海半日可串",
+      name: "Xishiku Cathedral 西什库教堂",
+      address: "33 Xishiku St, Xicheng, Beijing",
+      bestFor: "A free Gothic cathedral flanked by Chinese pavilions — rare anywhere in the world; a quiet rainy-day pick.",
+      feature: "From a top local 'free hidden gems' list: called Beijing's most beautiful church — stained glass, weekend hymns.",
+      routePairing: "West of Beihai — chains with Beihai / Shichahai for half a day",
       tags: [
-        "免费",
-        "小众",
-        "建筑"
+        "free",
+        "hidden gem",
+        "architecture"
       ],
       detailMode: "compact",
-      playbookIntro: "哥特式教堂配中式琉璃碑亭，这种组合全世界少见；非弥撒时段安静参观，周末有圣歌。",
-      sourceNote: "小红书 r010（免费小众清单：西什库教堂=北京最美教堂/彩窗/周末圣歌，1.6万赞）",
+      playbookIntro: "Gothic spires + Chinese glazed pavilions in one frame — visit quietly outside mass times; hymns on weekends.",
+      sourceNote: "Xiaohongshu r010 (free hidden-gems list: 西什库教堂 = Beijing's most beautiful church / stained glass / weekend hymns, 16k likes)",
       playbookGroups: [
         {
-          title: "看/拍",
+          title: "See & Shoot",
           items: [
             {
-              label: "教堂正立面+碑亭",
+              label: "Facade + pavilions 西什库教堂",
               query: "西什库教堂",
               linkType: "exact",
-              text: "哥特尖顶和中式碑亭同框的角度在前院左右两侧"
+              text: "The Gothic front with the two Chinese stele pavilions — the one-frame shot is from the front courtyard's sides"
             }
           ]
         },
         {
-          title: "提醒",
+          title: "Tips",
           items: [
             {
-              label: "周末圣歌",
+              label: "Weekend hymns",
               linkType: "none",
-              text: "周末可静坐听圣歌；开放时间以现场为准"
+              text: "周末可静坐听圣歌 — sit in for hymns on weekends; opening hours vary, check on site"
             }
           ]
         }
@@ -1871,11 +1872,11 @@ window.TRAVEL_GUIDE = {
       steps: [
         {
           order: 1,
-          name: "西什库教堂",
-          kind: "参观",
-          duration: "30-45 分钟",
+          name: "Xishiku Cathedral 西什库教堂",
+          kind: "Visit",
+          duration: "30-45 min",
           googleQuery: "西什库教堂",
-          action: "高德搜『西什库教堂』导航；看完可步行去北海北门或什刹海。",
+          action: "Navigate by searching 西什库教堂 in AMap; afterwards walk to Beihai's north gate or Shichahai.",
           recommendationGroups: [],
           lat: 39.926593,
           lon: 116.384833
@@ -1887,7 +1888,7 @@ window.TRAVEL_GUIDE = {
         lat: 39.9252,
         lon: 116.3786
       },
-      distance: "距王府井直线约 2.5 km",
+      distance: "~2.5 km from Wangfujing",
       sourceFiles: [
         "report.md",
         "analyses.jsonl",

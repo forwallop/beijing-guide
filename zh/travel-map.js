@@ -131,14 +131,14 @@
   }
 
   function detailActionLabel(place) {
-    return isSequencePlace(place) ? "Visit Plan" : "Visit Tips";
+    return isSequencePlace(place) ? "玩法顺序" : "玩法建议";
   }
 
   function detailPillLabel(place) {
     const steps = place?.steps || [];
-    if (isSequencePlace(place)) return `Visit Plan · ${steps.length} stops`;
-    if (steps.length === 1) return "Single Stop · Tips";
-    return "Single Stop · No forced route";
+    if (isSequencePlace(place)) return `玩法顺序 · ${steps.length} 站`;
+    if (steps.length === 1) return "单点停留 · 到店建议";
+    return "单点停留 · 不硬拆动线";
   }
 
   function hotelDirectionsUrl(place) {
@@ -153,22 +153,22 @@
   function currentDirectionsUrl(place) {
     const point = pointOfPlace(place);
     if (currentUserLatLng && isFiniteNumber(currentUserLatLng.lat) && isFiniteNumber(currentUserLatLng.lon) && isFiniteNumber(point.lat) && isFiniteNumber(point.lon)) {
-      return `https://uri.amap.com/navigation?from=${currentUserLatLng.lon},${currentUserLatLng.lat},${encodeURIComponent("My location")}&to=${point.lon},${point.lat},${encodeURIComponent(place.name || "目的地")}&mode=walk&coordinate=gaode&callnative=1`;
+      return `https://uri.amap.com/navigation?from=${currentUserLatLng.lon},${currentUserLatLng.lat},${encodeURIComponent("我的当前位置")}&to=${point.lon},${point.lat},${encodeURIComponent(place.name || "目的地")}&mode=walk&coordinate=gaode&callnative=1`;
     }
     return hotelDirectionsUrl(place);
   }
 
   function currentDirectionsLabel() {
-    return currentUserLatLng ? "Navigate from My Location" : `Navigate from ${anchorShort()}`;
+    return currentUserLatLng ? "从当前位置导航" : `从${anchorShort()}导航`;
   }
 
   function hotelDirectionsLabel() {
-    return `Navigate from ${anchorShort()}`;
+    return `从${anchorShort()}导航`;
   }
 
   function stepNavigationUrl(step) {
     if (currentUserLatLng && isFiniteNumber(currentUserLatLng.lat) && isFiniteNumber(currentUserLatLng.lon) && isFiniteNumber(step.lat) && isFiniteNumber(step.lon)) {
-      return `https://uri.amap.com/navigation?from=${currentUserLatLng.lon},${currentUserLatLng.lat},${encodeURIComponent("My location")}&to=${step.lon},${step.lat},${encodeURIComponent(step.name || "目的地")}&mode=walk&coordinate=gaode&callnative=1`;
+      return `https://uri.amap.com/navigation?from=${currentUserLatLng.lon},${currentUserLatLng.lat},${encodeURIComponent("我的当前位置")}&to=${step.lon},${step.lat},${encodeURIComponent(step.name || "目的地")}&mode=walk&coordinate=gaode&callnative=1`;
     }
     return stepPointUrl(step);
   }
@@ -186,7 +186,7 @@
     if (currentUserLatLng) {
       params.set("pickUpLatitude", String(currentUserLatLng.lat));
       params.set("pickUpLongitude", String(currentUserLatLng.lon));
-      params.set("pickUpAddress", "My location");
+      params.set("pickUpAddress", "我的当前位置");
     }
     return params;
   }
@@ -225,9 +225,9 @@
   }
 
   function anchorShort() {
-    const name = guide.anchor?.shortName || guide.anchor?.name || "Home";
+    const name = guide.anchor?.shortName || guide.anchor?.name || "住地";
     const firstWord = String(name).split(/\s+/)[0];
-    return firstWord || "Home";
+    return firstWord || "住地";
   }
 
   function tagsHtml(tags) {
@@ -283,11 +283,11 @@
     if (place.cardAction) return place.cardAction;
     const stepNames = (place.steps || []).slice(0, 3).map((step) => step.name).filter(Boolean).join(" / ");
     const title = category.title || "";
-    if (/吃|food|eat|snack/i.test(title)) return `Main line — eat your way through: ${stepNames}.`;
-    if (/买|shop|market/i.test(title)) return `Main line — shop & stock up: ${stepNames}.`;
-    if (/玩|play|ride/i.test(title)) return `Main line — wander & experience: ${stepNames}.`;
-    if (/看展|museum|exhibit|art|indoor/i.test(title)) return `Main line — exhibitions & context: ${stepNames}.`;
-    return `Main line — see & shoot: ${stepNames}.`;
+    if (title.includes("吃")) return `主线是吃喝取舍：${stepNames}。`;
+    if (title.includes("买")) return `主线是买和补给：${stepNames}。`;
+    if (title.includes("玩")) return `主线是逛和体验：${stepNames}。`;
+    if (title.includes("看展")) return `主线是看展补背景：${stepNames}。`;
+    return `主线是看和拍：${stepNames}。`;
   }
 
   function overviewActionHtml(place, category) {
@@ -297,7 +297,7 @@
         <div class="intent-label">${escapeHtml(categoryIntentLabel(category))} · 具体做什么</div>
         <p>${escapeHtml(overviewAction(place, category))}</p>
         ${picks.length ? `
-          <div class="mini-picks action-picks" aria-label="What to Do & Where">
+          <div class="mini-picks action-picks" aria-label="玩法和对应地点">
             ${picks.map((pick) => {
               const label = typeof pick === "string" ? pick : pick.label;
               const target = typeof pick === "string" ? pick : (pick.target || pick.query || pick.place || pick.label);
@@ -360,33 +360,33 @@
 
   function popupHtml(place) {
     const category = categoryFor(place);
-    const categoryTitle = category.title || "Place";
-    const routeHint = place.routePairing || place.routeHint || "Fit in by energy and route";
+    const categoryTitle = category.title || "地点";
+    const routeHint = place.routePairing || place.routeHint || "可按当天精力顺路安排";
     const feature = place.feature || place.bestFor || place.note || "";
     return `
       <div class="popup-title">${escapeHtml(place.name)}</div>
       <div class="popup-address">${escapeHtml(place.address || "")}</div>
       <div class="popup-type">${escapeHtml(categoryTitle)}</div>
       <div class="popup-distance">${escapeHtml(place.distance || "")}</div>
-      <div class="popup-section popup-feature"><strong>Why</strong>${escapeHtml(feature)}</div>
-      <div class="popup-section popup-best"><strong>Best for</strong>${escapeHtml(place.bestFor || "Fit in en route.")}</div>
-      <div class="popup-section popup-route"><strong>Pairs with</strong>${escapeHtml(routeHint)}</div>
+      <div class="popup-section popup-feature"><strong>特色</strong>${escapeHtml(feature)}</div>
+      <div class="popup-section popup-best"><strong>适合</strong>${escapeHtml(place.bestFor || "顺路安排。")}</div>
+      <div class="popup-section popup-route"><strong>顺路组合</strong>${escapeHtml(routeHint)}</div>
       ${tagsHtml(place.tags || [])}
-      <div class="popup-section popup-note"><strong>Suggested</strong>${escapeHtml(place.note || place.feature || "")}</div>
-      <div class="popup-section popup-source"><strong>Source</strong>${escapeHtml(place.sourceNote || place.source || "")}</div>
+      <div class="popup-section popup-note"><strong>建议玩法</strong>${escapeHtml(place.note || place.feature || "")}</div>
+      <div class="popup-section popup-source"><strong>筛选依据</strong>${escapeHtml(place.sourceNote || place.source || "")}</div>
       <div class="popup-actions">
-        <a class="guide-link" href="${detailUrl(place)}">Visit Guide</a>
-        ${hasInternalMap(place) ? `<a href="${internalMapUrl(place)}">Site Map</a>` : ""}
+        <a class="guide-link" href="${detailUrl(place)}">现场玩法</a>
+        ${hasInternalMap(place) ? `<a href="${internalMapUrl(place)}">内部地图</a>` : ""}
         <a href="${currentDirectionsUrl(place)}" data-current-nav-place="${escapeHtml(place.id)}" target="_blank" rel="noopener">${escapeHtml(currentDirectionsLabel())}</a>
-        <a class="grab-link" href="${grabDirectUrl(place)}" data-grab-place="${escapeHtml(place.id)}">DiDi Ride</a>
-        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">Open in AMap</a>
+        <a class="grab-link" href="${grabDirectUrl(place)}" data-grab-place="${escapeHtml(place.id)}">滴滴打车</a>
+        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">高德查看</a>
       </div>
     `;
   }
 
   function initBaseText() {
-    setText("[data-guide-title]", guide.title || "Mobile Travel Map");
-    setText("[data-guide-subtitle]", guide.subtitle || "Start from home base; pick what you want to do, then see how each place chains into a route.");
+    setText("[data-guide-title]", guide.title || "手机旅行地图");
+    setText("[data-guide-subtitle]", guide.subtitle || "从住地出发；主列表按项目类型组织，先判断想玩什么，再看每个点适合顺路接到哪条片区路线。");
   }
 
   function renderOverview() {
@@ -403,11 +403,11 @@
     if (map && guide.anchor && isFiniteNumber(guide.anchor.lat) && isFiniteNumber(guide.anchor.lon)) {
       L.marker([guide.anchor.lat, guide.anchor.lon], {
         icon: markerIcon("#30363d", 26, "H"),
-        title: guide.anchor.name || "Home"
+        title: guide.anchor.name || "住地"
       })
         .addTo(map)
         .bindPopup(`
-          <div class="popup-title">${escapeHtml(guide.anchor.name || "Home")}</div>
+          <div class="popup-title">${escapeHtml(guide.anchor.name || "住地")}</div>
           <div class="popup-address">${escapeHtml(guide.anchor.address || "")}</div>
           <div class="popup-section">地图中的距离均从这里估算，真实用时以当天路况为准。</div>
         `);
@@ -498,24 +498,24 @@
 
   function placeCard(place, category) {
     const card = document.createElement("article");
-    const routeHint = place.routePairing || place.routeHint || "Fit in by energy and route";
+    const routeHint = place.routePairing || place.routeHint || "可按当天精力顺路安排";
     applyCategoryStyle(card, category);
     card.className = "place";
     card.dataset.placeId = place.id || "";
     card.innerHTML = `
-      <div class="place-category">${escapeHtml(category.title || "Place")} · #${escapeHtml(markerLabel(place))}</div>
+      <div class="place-category">${escapeHtml(category.title || "地点")} · #${escapeHtml(markerLabel(place))}</div>
       <h2>${escapeHtml(markerLabel(place))}. ${escapeHtml(place.name)}</h2>
-      <div class="meta">${escapeHtml(place.bestFor || "Fit in en route.")} · 顺路：${escapeHtml(routeHint)}</div>
+      <div class="meta">${escapeHtml(place.bestFor || "顺路安排。")} · 顺路：${escapeHtml(routeHint)}</div>
       <div class="distance">${escapeHtml(place.distance || "")}</div>
       <div class="note">${escapeHtml(place.feature || place.note || "")}</div>
       ${tagsHtml(place.tags || [])}
       <div class="card-actions">
-        <button type="button" class="focus-place">Focus Map</button>
+        <button type="button" class="focus-place">地图定位</button>
         <a class="guide-link" href="${detailUrl(place)}">${escapeHtml(detailActionLabel(place))}</a>
-        ${hasInternalMap(place) ? `<a href="${internalMapUrl(place)}">Site Map</a>` : ""}
+        ${hasInternalMap(place) ? `<a href="${internalMapUrl(place)}">内部地图</a>` : ""}
         <a class="primary" href="${hotelDirectionsUrl(place)}" target="_blank" rel="noopener">${escapeHtml(hotelDirectionsLabel())}</a>
-        <a class="grab-link" href="${grabDirectUrl(place)}" data-grab-place="${escapeHtml(place.id)}">DiDi Ride</a>
-        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">View Place</a>
+        <a class="grab-link" href="${grabDirectUrl(place)}" data-grab-place="${escapeHtml(place.id)}">滴滴打车</a>
+        <a href="${mapsUrl(place)}" target="_blank" rel="noopener">查看地点</a>
       </div>
     `;
     card.querySelector(".focus-place").addEventListener("click", () => focusPlace(place));
@@ -537,7 +537,7 @@
     const category = categoryFor(place);
     setAccent(category);
     document.title = `${place.name} - ${detailActionLabel(place)}`;
-    setText("[data-category-title]", category.title || "Place");
+    setText("[data-category-title]", category.title || "地点");
     setText("[data-place-title]", place.name);
     setText("[data-place-summary]", place.playbookIntro || place.feature || place.bestFor || "");
     setText("[data-step-count]", detailPillLabel(place));
@@ -627,7 +627,7 @@
   }
 
   function mapHint(linkHtml) {
-    return linkHtml ? ` <span class="rec-map-hint"> (map: ${linkHtml})</span>` : "";
+    return linkHtml ? ` <span class="rec-map-hint">（地图：${linkHtml}）</span>` : "";
   }
 
   function contentFirstRecSentence(item, label, linkHtml, detail) {
@@ -690,11 +690,11 @@
     const steps = place.steps || [];
     const items = [];
     const mainAction = place.actionSummary || steps[0]?.action || place.feature || place.bestFor || "";
-    if (mainAction) items.push(["How to use this stop", mainAction]);
-    if (place.bestFor) items.push(["Best time", place.bestFor]);
-    if (place.feature && place.feature !== mainAction) items.push(["Highlights", place.feature]);
-    if (place.routePairing) items.push(["Pairs with", place.routePairing]);
-    if (steps[0]?.action && steps[0].action !== mainAction) items.push(["On arrival", steps[0].action]);
+    if (mainAction) items.push(["怎么用这个点", mainAction]);
+    if (place.bestFor) items.push(["适合什么时候去", place.bestFor]);
+    if (place.feature && place.feature !== mainAction) items.push(["重点看什么", place.feature]);
+    if (place.routePairing) items.push(["适合顺路接哪里", place.routePairing]);
+    if (steps[0]?.action && steps[0].action !== mainAction) items.push(["到店提示", steps[0].action]);
     return items.slice(0, 5);
   }
 
@@ -710,17 +710,17 @@
     const mapTarget = stepPointUrl((place.steps || [])[0] || place);
     container.hidden = false;
     container.innerHTML = `
-      <div class="panel-title">At the Place</div>
+      <div class="panel-title">到店玩法</div>
       <div class="compact-guide-panel">
         ${items.length ? `<dl>${items.map(([label, value]) => `
           <div>
             <dt>${escapeHtml(label)}</dt>
             <dd>${escapeHtml(value)}</dd>
           </div>
-        `).join("")}</dl>` : `<p>${escapeHtml(place.playbookIntro || place.sourceNote || "Single-stop place — no forced multi-step route.")}</p>`}
+        `).join("")}</dl>` : `<p>${escapeHtml(place.playbookIntro || place.sourceNote || "这个点按单点停留处理，不拆成多步动线。")}</p>`}
         <div class="compact-actions">
           <a class="button primary" href="${hotelDirectionsUrl(place)}" target="_blank" rel="noopener">${escapeHtml(hotelDirectionsLabel())}</a>
-          <a class="button" href="${mapTarget}" target="_blank" rel="noopener">View Place</a>
+          <a class="button" href="${mapTarget}" target="_blank" rel="noopener">查看地点</a>
         </div>
       </div>
     `;
@@ -742,18 +742,18 @@
       const meta = [step.kind, step.duration].filter(Boolean).join(" · ");
       return `
         <tr id="step-${step.order}">
-          <td class="order-cell" data-label="#">${escapeHtml(step.order)}</td>
-          <td class="step-cell" data-label="Stop / Action">
+          <td class="order-cell" data-label="顺序">${escapeHtml(step.order)}</td>
+          <td class="step-cell" data-label="地点/动作">
             <h2 class="step-title">${escapeHtml(step.name)}</h2>
             ${meta ? `<span class="tag">${escapeHtml(meta)}</span>` : ""}
           </td>
-          <td class="nav-cell" data-label="Map">
+          <td class="nav-cell" data-label="地图">
             <div class="table-actions">
-              <a class="button" href="${stepPointUrl(step)}" target="_blank" rel="noopener">AMap</a>
-              <a class="button primary" href="${internalMapUrl(place)}#step-${step.order}">Site Map</a>
+              <a class="button" href="${stepPointUrl(step)}" target="_blank" rel="noopener">高德地图</a>
+              <a class="button primary" href="${internalMapUrl(place)}#step-${step.order}">内部地图</a>
             </div>
           </td>
-          <td class="action-cell" data-label="What & How">
+          <td class="action-cell" data-label="做什么/怎么做">
             <div class="action-text">${escapeHtml(step.action || "")}</div>
             ${renderRecBox(step)}
           </td>
@@ -767,9 +767,9 @@
     if (!place) return;
     const category = categoryFor(place);
     setAccent(category);
-    document.title = `${place.name} - Site Map`;
-    setText("[data-category-title]", category.title || "Place");
-    setText("[data-place-title]", hasInternalMap(place) ? `${place.name} Site Map` : `${place.name} Place Map`);
+    document.title = `${place.name} - 内部地图`;
+    setText("[data-category-title]", category.title || "地点");
+    setText("[data-place-title]", hasInternalMap(place) ? `${place.name} 内部地图` : `${place.name} 地点地图`);
     setText("[data-place-summary]", place.feature || place.bestFor || "");
     document.querySelector("[data-detail-link]")?.setAttribute("href", detailUrl(place));
     renderStepCards(place);
@@ -800,8 +800,8 @@
           <div class="popup-title">${escapeHtml(step.order)}. ${escapeHtml(step.name)}</div>
           <div class="popup-section">${escapeHtml(step.action || "")}</div>
           <div class="popup-actions">
-            <a href="${stepNavigationUrl(step)}" data-step-place="${escapeHtml(place.id)}" data-step-nav="${escapeHtml(step.order)}" target="_blank" rel="noopener">AMap</a>
-            <a class="guide-link" href="${detailUrl(place)}#step-${step.order}">Full Guide</a>
+            <a href="${stepNavigationUrl(step)}" data-step-place="${escapeHtml(place.id)}" data-step-nav="${escapeHtml(step.order)}" target="_blank" rel="noopener">高德地图</a>
+            <a class="guide-link" href="${detailUrl(place)}#step-${step.order}">完整玩法</a>
           </div>
         `);
     });
@@ -835,9 +835,9 @@
           </div>
           <p class="action-text">${escapeHtml(place.actionSummary || place.feature || place.bestFor || "")}</p>
           <div class="item-actions">
-            <button type="button" data-fit-single>Focus Map</button>
-            <a class="button" href="${mapsUrl(place)}" target="_blank" rel="noopener">AMap</a>
-            <a class="button primary" href="${detailUrl(place)}">Full Guide</a>
+            <button type="button" data-fit-single>地图定位</button>
+            <a class="button" href="${mapsUrl(place)}" target="_blank" rel="noopener">高德地图</a>
+            <a class="button primary" href="${detailUrl(place)}">完整玩法</a>
           </div>
         </article>
       `;
@@ -857,9 +857,9 @@
           </div>
           <p class="action-text">${escapeHtml(step.action || "")}</p>
           <div class="item-actions">
-            <button type="button" data-focus="${step.order}">Focus Map</button>
-            <a class="button" href="${stepNavigationUrl(step)}" data-step-place="${escapeHtml(place.id)}" data-step-nav="${escapeHtml(step.order)}" target="_blank" rel="noopener">AMap</a>
-            <a class="button primary" href="${detailUrl(place)}#step-${step.order}">Full Guide</a>
+            <button type="button" data-focus="${step.order}">地图定位</button>
+            <a class="button" href="${stepNavigationUrl(step)}" data-step-place="${escapeHtml(place.id)}" data-step-nav="${escapeHtml(step.order)}" target="_blank" rel="noopener">高德地图</a>
+            <a class="button primary" href="${detailUrl(place)}#step-${step.order}">完整玩法</a>
           </div>
         </article>
       `;
@@ -922,7 +922,7 @@
       dLon = (dLon * 180.0) / (A2 / sqrtMagic * Math.cos(radLat) * PI2);
       return { lat: latitude + dLat, lon: longitude + dLon };
     })();
-    const accuracyText = Number.isFinite(accuracy) ? `, accuracy ~${Math.round(accuracy)} m` : "";
+    const accuracyText = Number.isFinite(accuracy) ? `，精度约 ${Math.round(accuracy)} 米` : "";
     const userIcon = L.divIcon({
       className: "user-location-marker",
       html: '<span class="user-location-dot"></span>',
@@ -931,7 +931,7 @@
     });
 
     if (!userMarker) {
-      userMarker = L.marker(latLng, { icon: userIcon, title: "My location" })
+      userMarker = L.marker(latLng, { icon: userIcon, title: "我的当前位置" })
         .addTo(map)
         .bindPopup('<div class="popup-title">我的当前位置</div>');
     } else {
@@ -958,34 +958,34 @@
     }
     refreshGrabLinks();
     const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-    setLocationStatus(`Tracking your location${accuracyText}, updated ${time}.`);
+    setLocationStatus(`正在追踪当前位置${accuracyText}，更新于 ${time}。`);
     const locateButton = document.getElementById("locateButton");
-    if (locateButton) locateButton.textContent = "Recenter";
+    if (locateButton) locateButton.textContent = "重新居中";
   }
 
   function locationError(error) {
     const messages = {
-      1: "Location permission denied. Allow it in browser/system settings, or just use Navigate from home on each card.",
-      2: "Cannot get your location right now. Try outdoors or enable location services.",
-      3: "Location timed out. Retry, or use Navigate from home on each card."
+      1: "定位权限被拒绝。请在浏览器或系统设置里允许位置权限，或直接点地点卡片里的从住地导航。",
+      2: "暂时无法获取定位。可到室外或打开手机定位服务后重试。",
+      3: "定位超时。可重试，或直接点地点卡片里的从住地导航。"
     };
-    setLocationStatus(messages[error?.code] || "Location failed. Use Navigate from home instead.");
+    setLocationStatus(messages[error?.code] || "定位失败。可直接使用从住地导航。");
     const locateButton = document.getElementById("locateButton");
-    if (locateButton) locateButton.textContent = "Locate Me";
+    if (locateButton) locateButton.textContent = "定位我";
   }
 
   function locateMe() {
     if (!("geolocation" in navigator)) {
-      setLocationStatus("This browser does not support geolocation. Use Navigate from home instead.");
+      setLocationStatus("当前浏览器不支持网页定位。请直接使用从住地导航。");
       return;
     }
     if (window.isSecureContext === false) {
-      setLocationStatus("Not a secure context — the browser may block geolocation. Open via HTTPS, or use Navigate from home.");
+      setLocationStatus("当前打开方式不是安全上下文，浏览器可能会阻止定位。请用 HTTPS 打开，或直接使用从住地导航。");
     } else {
-      setLocationStatus(watchId === null ? "Requesting location permission and starting tracking..." : "Recentering to your location...");
+      setLocationStatus(watchId === null ? "正在请求定位权限并开启追踪..." : "正在重新居中到当前位置...");
     }
     const locateButton = document.getElementById("locateButton");
-    if (locateButton) locateButton.textContent = "Locating...";
+    if (locateButton) locateButton.textContent = "定位中...";
     hasCenteredOnLocate = false;
     navigator.geolocation.getCurrentPosition(
       (position) => {

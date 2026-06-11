@@ -2,14 +2,18 @@
   "provider": "github-pages",
   "public_url": "https://forwallop.github.io/beijing-guide/",
   "repo": "forwallop/beijing-guide",
-  "account": "forwallop（原 quanquanluo0309-lang 已改名，2026-06-11；gh CLI token 继续有效）",
+  "account": "forwallop（原 quanquanluo0309-lang 已改名；gh CLI 本机已授权）",
   "deploy_command": "node build.mjs <version> && cd site && git add -A && git commit -m update && git push",
   "pages_config": "main branch / root, .nojekyll",
-  "asset_version": "bjv7",
+  "asset_version": "bjv8",
   "deployed_at": "2026-06-11",
   "superseded_urls": [
     "https://beijing-foreigner-guide.surge.sh（2026-06-11 注销）",
     "https://quanquanluo0309-lang.github.io/beijing-guide/（用户名更改后失效，github.io 不跨用户名重定向）"
   ],
-  "notes": "PageDrop 宕机期间用户选定 GitHub Pages。github.io 大陆裸网时好时坏：外国朋友用漫游流量不受影响，自己访问不稳时挂代理。PageDrop 恢复后可迁回（zip 在本目录）。"
+  "notes": "PageDrop 宕机期间用户选定 GitHub Pages。github.io 大陆裸网时好时坏：外国朋友用漫游流量不受影响，自己访问不稳时挂代理。PageDrop 恢复后可迁回（zip 在本目录）。",
+  "languages": {
+    "en": "https://forwallop.github.io/beijing-guide/（英文主站，地名双语）",
+    "zh": "https://forwallop.github.io/beijing-guide/zh/（中文版）"
+  }
 }
