@@ -255,11 +255,11 @@
 
   function categoryIntentLabel(category) {
     const title = category.title || "";
-    if (title.includes("吃")) return "吃/喝";
-    if (title.includes("买")) return "买/带走";
-    if (title.includes("玩")) return "玩/逛";
-    if (title.includes("看展")) return "看展";
-    return "看/拍";
+    if (/吃|food|eat|snack/i.test(title)) return "Eat & Drink";
+    if (/买|shop|market/i.test(title)) return "Buy & Take";
+    if (/玩|play|ride/i.test(title)) return "Wander & Play";
+    if (/看展|museum|exhibit|art|indoor/i.test(title)) return "Exhibitions";
+    return "See & Shoot";
   }
 
   function overviewPicks(place, category) {
@@ -294,7 +294,7 @@
     const picks = overviewPicks(place, category);
     return `
       <div class="intent-box">
-        <div class="intent-label">${escapeHtml(categoryIntentLabel(category))} · 具体做什么</div>
+        <div class="intent-label">${escapeHtml(categoryIntentLabel(category))} · what to do</div>
         <p>${escapeHtml(overviewAction(place, category))}</p>
         ${picks.length ? `
           <div class="mini-picks action-picks" aria-label="What to Do & Where">
@@ -409,7 +409,7 @@
         .bindPopup(`
           <div class="popup-title">${escapeHtml(guide.anchor.name || "Home")}</div>
           <div class="popup-address">${escapeHtml(guide.anchor.address || "")}</div>
-          <div class="popup-section">地图中的距离均从这里估算，真实用时以当天路况为准。</div>
+          <div class="popup-section">Distances on this map are measured from here; actual times depend on traffic.</div>
         `);
     }
     places.forEach(addPlaceMarker);
@@ -469,7 +469,7 @@
           <span class="type-title-line">
             <span class="dot type-dot"></span>
             <span class="type-name">${escapeHtml(category.title || type)}</span>
-            <span class="type-count">${groupedPlaces.length} 个</span>
+            <span class="type-count">${groupedPlaces.length}</span>
           </span>
           <span class="type-summary">${escapeHtml(category.summary || "")}</span>
         </span>
@@ -505,7 +505,7 @@
     card.innerHTML = `
       <div class="place-category">${escapeHtml(category.title || "Place")} · #${escapeHtml(markerLabel(place))}</div>
       <h2>${escapeHtml(markerLabel(place))}. ${escapeHtml(place.name)}</h2>
-      <div class="meta">${escapeHtml(place.bestFor || "Fit in en route.")} · 顺路：${escapeHtml(routeHint)}</div>
+      <div class="meta">${escapeHtml(place.bestFor || "Fit in en route.")} · Pairs with: ${escapeHtml(routeHint)}</div>
       <div class="distance">${escapeHtml(place.distance || "")}</div>
       <div class="note">${escapeHtml(place.feature || place.note || "")}</div>
       ${tagsHtml(place.tags || [])}
@@ -607,7 +607,7 @@
   function finishSentence(value) {
     const text = String(value || "").trim();
     if (!text) return "";
-    return /[。！？.!?]$/u.test(text) ? text : `${text}。`;
+    return /[。！？.!?]$/u.test(text) ? text : `${text}.`;
   }
 
   const nonPlaceMapLabelPattern = /(休息|补给|补水|轻便|小件|地图确认|营业|确认|排队|取舍|预算|节奏|逻辑|接法|路线|转场|方向|安全|礼让|人流|低体力|防晒|雨天|阵雨|闭馆|预约|时间|邮寄|避坑|不要|只买|不买|随身|垃圾|看好|保存|现场|为准|风大|温差|电量|负重|错峰|高峰|定位|明信片|小吃(?!区)|咖啡(?!馆)|咖啡豆|米线店|鲜花饼|奶茶|饮品|冰箱贴|小包|小物|周边|挂件|花酱|干货(?!山珍区|区)|水果(?!区)|干巴|火腿|雨衣|雨具|帽子|墨镜|防晒|鸥粮|零食|饮料|口味|主题书|图录|餐具|票|读书位|氛围|装饰|批发|清仓|日场|夜场|空间)/u;
@@ -623,7 +623,7 @@
 
   function renderRecLink(item, label, url) {
     if (!url) return `<strong>${escapeHtml(label)}</strong>`;
-    return `<a class="rec-link rec-link-exact" href="${escapeHtml(url)}" target="_blank" rel="noopener" title="地图地点">${escapeHtml(label)}</a>`;
+    return `<a class="rec-link rec-link-exact" href="${escapeHtml(url)}" target="_blank" rel="noopener" title="Map place">${escapeHtml(label)}</a>`;
   }
 
   function mapHint(linkHtml) {
@@ -662,7 +662,7 @@
       <div class="rec-box">
         ${groups.map((group) => `
           <div class="rec-group">
-            <div class="rec-label">${escapeHtml(group.title || "推荐")}</div>
+            <div class="rec-label">${escapeHtml(group.title || "Picks")}</div>
             <ul class="rec-list">
               ${(group.items || []).map((item) => `<li>${renderRecItem(item, group.title)}</li>`).join("")}
             </ul>
@@ -680,7 +680,7 @@
     if (panel) panel.hidden = !groups.length;
     container.innerHTML = groups.map((group) => `
       <article class="playbook-card${group.featured ? " playbook-card-featured" : ""}">
-        <h2>${escapeHtml(group.title || "推荐")}</h2>
+        <h2>${escapeHtml(group.title || "Picks")}</h2>
         <ul>${(group.items || []).map((item) => `<li>${renderRecItem(item, group.title)}</li>`).join("")}</ul>
       </article>
     `).join("");
@@ -830,7 +830,7 @@
             <span class="step-num">${escapeHtml(markerLabel(place) || "•")}</span>
             <div>
               <h2 class="step-title">${escapeHtml(place.name)}</h2>
-              <div class="muted">单点停留，不拆内部动线</div>
+              <div class="muted">Single stop — no internal route</div>
             </div>
           </div>
           <p class="action-text">${escapeHtml(place.actionSummary || place.feature || place.bestFor || "")}</p>
@@ -933,7 +933,7 @@
     if (!userMarker) {
       userMarker = L.marker(latLng, { icon: userIcon, title: "My location" })
         .addTo(map)
-        .bindPopup('<div class="popup-title">我的当前位置</div>');
+        .bindPopup('<div class="popup-title">My location</div>');
     } else {
       userMarker.setLatLng(latLng);
     }
