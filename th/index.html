@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แผนที่เที่ยวปักกิ่งฉบับนักท่องเที่ยว</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=bjv11">
+</head>
+<body data-page="overview">
+  <main class="shell">
+    <aside aria-label="Place list">
+      <header class="overview-header">
+        <h1 data-guide-title>แผนที่เที่ยวบนมือถือ</h1>
+        <p class="sub" data-guide-subtitle>เริ่มจากที่พัก เลือกว่าอยากทำอะไร แล้วค่อยดูว่าไปที่ไหน</p>
+      </header>
+
+      <section id="placeList" class="list" aria-label="Place list"></section>
+    </aside>
+
+    <section class="map-wrap" aria-label="Trip map">
+      <div id="map"></div>
+      <div class="map-tools" aria-label="Map tools">
+        <button id="locateButton" class="map-button primary" type="button">ระบุตำแหน่งฉัน</button>
+        <button id="fitButton" class="map-button" type="button">ดูทั้งหมด</button>
+        <div id="locationStatus" class="location-status">แตะ “ระบุตำแหน่งฉัน” เพื่อแสดงตำแหน่งของคุณ</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="guide-data.js?v=bjv11"></script>
+  <script src="travel-map.js?v=bjv11"></script>
+</body>
+</html>

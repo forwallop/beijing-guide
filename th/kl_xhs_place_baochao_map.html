@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เดินเล่นหูท่งเป่าเชา 宝钞胡同 · Site Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=bjv11">
+</head>
+<body data-page="internal-map" data-place-id="baochao">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="eyebrow" data-category-title></span>
+        <h1 data-place-title>แผนที่ภายใน</h1>
+      </div>
+      <nav class="nav-actions" aria-label="Page navigation">
+        <a class="button" href="index.html">แผนที่รวม</a>
+        <a class="button primary" data-detail-link href="#">แผนเดินเที่ยว</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="map-shell">
+    <aside class="drawer" aria-label="Internal steps">
+      <div class="drawer-head">
+        <p class="summary" data-place-summary></p>
+      </div>
+      <section id="stepCards" class="map-list" aria-label="Site map steps"></section>
+    </aside>
+
+    <section class="map-panel" aria-label="Site map">
+      <div id="detailMap"></div>
+      <div class="map-tools" aria-label="Map tools">
+        <button id="locateButton" class="map-button primary" type="button">ระบุตำแหน่งฉัน</button>
+        <button id="fitButton" class="map-button" type="button">ดูทั้งหมด</button>
+        <div id="locationStatus" class="location-status">แตะ “ระบุตำแหน่งฉัน” เพื่อแสดงตำแหน่งของคุณ</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="guide-data.js?v=bjv11"></script>
+  <script src="travel-map.js?v=bjv11"></script>
+</body>
+</html>

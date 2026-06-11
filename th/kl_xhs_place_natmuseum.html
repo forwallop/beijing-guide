@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>พิพิธภัณฑ์แห่งชาติจีน 国家博物馆·天安门东 · Guide</title>
+  <link rel="stylesheet" href="styles.css?v=bjv11">
+</head>
+<body data-page="detail" data-place-id="natmuseum">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="eyebrow" data-category-title></span>
+        <h1 data-place-title>แผนเดินเที่ยว</h1>
+      </div>
+      <nav class="nav-actions" aria-label="Page navigation">
+        <a class="button" href="index.html">แผนที่รวม</a>
+        <a class="button primary" data-internal-map-link href="#">แผนที่ภายใน</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <span class="pill" data-step-count>แผนเดินเที่ยว</span>
+    <p class="summary" data-place-summary></p>
+
+    <section class="playbook-panel" aria-label="Highlights">
+      <div class="panel-title">ไฮไลต์</div>
+      <div id="playbookGroups" class="playbook-grid"></div>
+    </section>
+
+    <section id="compactGuide" class="compact-guide" aria-label="Single-stop tips"></section>
+
+    <div class="panel-title sequence-title">เดินตามลำดับ</div>
+    <section class="table-wrap" aria-label="Visit plan table">
+      <table>
+        <thead>
+          <tr>
+            <th class="order-cell">#</th>
+            <th>จุด / ทำอะไร</th>
+            <th class="nav-cell">แผนที่</th>
+            <th>ทำยังไง</th>
+          </tr>
+        </thead>
+        <tbody id="sequenceRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="guide-data.js?v=bjv11"></script>
+  <script src="travel-map.js?v=bjv11"></script>
+</body>
+</html>

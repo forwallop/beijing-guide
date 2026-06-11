@@ -5,7 +5,7 @@
   "account": "forwallop（原 quanquanluo0309-lang 已改名；gh CLI 本机已授权）",
   "deploy_command": "node build.mjs <version> && cd site && git add -A && git commit -m update && git push",
   "pages_config": "main branch / root, .nojekyll",
-  "asset_version": "bjv9",
+  "asset_version": "bjv11",
   "deployed_at": "2026-06-11",
   "superseded_urls": [
     "https://beijing-foreigner-guide.surge.sh（2026-06-11 注销）",
@@ -14,7 +14,8 @@
   "notes": "用户选定 Netlify 为主托管（域名不含用户名）；GitHub Pages 同内容备份。修改流程：node build.mjs <ver> → netlify deploy（上行）+ git push（备份）。netlify.app 大陆裸网可能不稳，外国访客漫游不受影响。",
   "languages": {
     "en": "https://beijing-guide.netlify.app/",
-    "zh": "https://beijing-guide.netlify.app/zh/"
+    "zh": "https://beijing-guide.netlify.app/zh/",
+    "th": "https://beijing-guide.netlify.app/th/"
   },
   "netlify": {
     "site_id": "550e7de3-5309-463b-a1b6-95c439201469",
