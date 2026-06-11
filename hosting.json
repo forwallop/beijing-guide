@@ -1,0 +1,13 @@
+{
+  "provider": "surge.sh",
+  "public_url": "https://beijing-foreigner-guide.surge.sh",
+  "site_domain": "beijing-foreigner-guide.surge.sh",
+  "account": "quanquanluo0309@gmail.com (surge 账号本次任务创建)",
+  "credentials": "密码在本目录 .surge-pass.txt（chmod 600）；token 在 ~/.netrc",
+  "deploy_command": "npx surge ./site beijing-foreigner-guide.surge.sh",
+  "source_zip": "beijing-guide-site.zip",
+  "asset_version": "bjv7",
+  "deployed_at": "2026-06-10",
+  "superseded_urls": [],
+  "notes": "用户偏好：尽量不用 surge。2026-06-11 调研：免注册+长期托管暂无可用替代（pagedrop.io 14天且429；EdgeOne Drop 匿名1h），故暂留 surge 现链接；PageDrop 恢复后第一时间迁回并把本链接记入 superseded_urls；若用户授权 EdgeOne Pages token 则迁 EdgeOne。"
+}

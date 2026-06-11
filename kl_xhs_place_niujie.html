@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>牛街清真街·玩法</title>
+  <link rel="stylesheet" href="styles.css?v=bjv7">
+</head>
+<body data-page="detail" data-place-id="niujie">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="eyebrow" data-category-title></span>
+        <h1 data-place-title>现场玩法顺序</h1>
+      </div>
+      <nav class="nav-actions" aria-label="页面导航">
+        <a class="button" href="index.html">总览地图</a>
+        <a class="button primary" data-internal-map-link href="#">内部地图</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <span class="pill" data-step-count>玩法顺序</span>
+    <p class="summary" data-place-summary></p>
+
+    <section class="playbook-panel" aria-label="推荐清单">
+      <div class="panel-title">推荐清单</div>
+      <div id="playbookGroups" class="playbook-grid"></div>
+    </section>
+
+    <section id="compactGuide" class="compact-guide" aria-label="单点玩法建议"></section>
+
+    <div class="panel-title sequence-title">按顺序走</div>
+    <section class="table-wrap" aria-label="表格玩法顺序">
+      <table>
+        <thead>
+          <tr>
+            <th class="order-cell">顺序</th>
+            <th>去哪/动作</th>
+            <th class="nav-cell">地图</th>
+            <th>做什么/怎么做</th>
+          </tr>
+        </thead>
+        <tbody id="sequenceRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="guide-data.js?v=bjv7"></script>
+  <script src="travel-map.js?v=bjv7"></script>
+</body>
+</html>

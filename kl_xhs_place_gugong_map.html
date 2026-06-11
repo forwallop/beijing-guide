@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>故宫+景山公园·内部地图</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css?v=bjv7">
+</head>
+<body data-page="internal-map" data-place-id="gugong">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="eyebrow" data-category-title></span>
+        <h1 data-place-title>内部地图</h1>
+      </div>
+      <nav class="nav-actions" aria-label="页面导航">
+        <a class="button" href="index.html">总览地图</a>
+        <a class="button primary" data-detail-link href="#">玩法顺序</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="map-shell">
+    <aside class="drawer" aria-label="内部步骤">
+      <div class="drawer-head">
+        <p class="summary" data-place-summary></p>
+      </div>
+      <section id="stepCards" class="map-list" aria-label="内部地图步骤"></section>
+    </aside>
+
+    <section class="map-panel" aria-label="内部地图">
+      <div id="detailMap"></div>
+      <div class="map-tools" aria-label="地图工具">
+        <button id="locateButton" class="map-button primary" type="button">定位我</button>
+        <button id="fitButton" class="map-button" type="button">看全部</button>
+        <div id="locationStatus" class="location-status">点“定位我”显示当前位置。</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="guide-data.js?v=bjv7"></script>
+  <script src="travel-map.js?v=bjv7"></script>
+</body>
+</html>

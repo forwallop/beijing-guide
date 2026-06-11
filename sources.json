@@ -1,0 +1,108 @@
+{
+  "requested_platform": "xiaohongshu（用户指定）",
+  "research_artifacts": "/tmp/searchresearch-20260610174634-beijing-foreigner-guide/（plan.json 87 结果 + analyses.jsonl 87 行 + report.md）",
+  "research_copy": "../research/",
+  "searches": [
+    "外国人来北京 必去",
+    "带外国人逛北京",
+    "外国人 北京小吃",
+    "China Travel 北京",
+    "Beijing travel guide",
+    "北京烤鸭 外国人",
+    "慕田峪长城 攻略",
+    "外国人 北京 京剧",
+    "北京 过境免签 攻略",
+    "798艺术区 攻略"
+  ],
+  "geocoding": "Nominatim/OSM（WGS84）→ 构建时转 GCJ-02 配高德底图；西什库教堂为文档化估算，青松别院用日坛公园做区域锚点，导航均以高德搜索店名为准",
+  "selection_criteria": "重复证据、外国人视角适配、路线可用性、单品具体度优先；商家保留店名+单品；流动摊/店名不可考的样本不进商家层",
+  "global_caveats": [
+    "大馆预约：微信小程序+护照，故宫提前7天20:00放票，国博提前7天17:00，多数周一闭馆（r013/r046）",
+    "支付：支付宝可绑外卡（满200元有手续费），外国人微信收转账受限（r013）",
+    "240小时过境免签：英文政策PDF+第三国机票+临时入境卡三件套；入境查贴纸24h/240h；24小时内住宿登记（r077/r080）"
+  ],
+  "places": {
+    "gugong": {
+      "sourceNote": "小红书 r013（外国人预约实操）、r017（中轴线顺序+景山机位）、r053/r056（四季民福烤鸭）、r046（周一闭馆）",
+      "coordSource": "Nominatim: 午门（第1站）"
+    },
+    "tiananmen": {
+      "sourceNote": "小红书 r017（早到避人流）、r046（免费微信预约/故宫票可免）、r044（与国博同日）",
+      "coordSource": "Nominatim"
+    },
+    "tiantan": {
+      "sourceNote": "小红书 r046（联票/周一）、r033/r036（祈年殿、圜丘英文讲解）、r025（幸福大街早市顺路）、r044（行程位置）",
+      "coordSource": "Nominatim"
+    },
+    "yiheyuan": {
+      "sourceNote": "小红书 r017（北宫门省腿/长廊+游船）、r003（省钱高效路线）、r046（当日或提前7天约）",
+      "coordSource": "Nominatim"
+    },
+    "yonghegong": {
+      "sourceNote": "小红书 r026（雍和宫18件套：同日升/奶油老生/六面寿/烤肉宛/红星前进，图片多模态提取）、r046（每日开放）、r044（行程位置）",
+      "coordSource": "Nominatim"
+    },
+    "mutianyu": {
+      "sourceNote": "小红书 r061（交通/票价/最佳组合/避坑）、r066（三种登城组合价格）、r063（八达岭对比/外国朋友多）、r046（官方人少+缆车滑道）、r060/r062/r064/r065/r067（亲子互证）",
+      "coordSource": "Nominatim"
+    },
+    "badaling": {
+      "sourceNote": "小红书 r063（高铁/缆车/北八楼/免票政策）、r017（高铁或德胜门877路）、r046（微信约票+大巴联订）",
+      "coordSource": "Nominatim（进站通道）"
+    },
+    "shichahai": {
+      "sourceNote": "小红书 r017（Shichahai→Yandai Xiejie→Drum Tower 顺序+现场购票）、r028（什刹海/后海夜市烤串）、r044（行程位置）",
+      "coordSource": "Nominatim"
+    },
+    "nanluoguxiang": {
+      "sourceNote": "小红书 r017（Nanluogu Lane 800-year hutongs/糖葫芦）、r044（行程位置）",
+      "coordSource": "Nominatim（南口）"
+    },
+    "baochao": {
+      "sourceNote": "小红书 r002（宝钞胡同 citywalk：8 家小店名单+钟楼视角，1898赞/1939收藏）",
+      "coordSource": "derived: 宝钞胡同南口（鼓楼东大街交口，由街道地理编码推算）"
+    },
+    "qianmen": {
+      "sourceNote": "小红书 r027（十大伴手礼图集：张一元/六必居/稻香村零号店/吴裕泰，10图全读）、r028（前门小吃街：烤鸭/酸奶/糕点）",
+      "coordSource": "Nominatim"
+    },
+    "niujie": {
+      "sourceNote": "小红书 r028（六大夜市街：牛街=halal/lamb hot pot/glutinous rice snacks，Best value: Niujie）",
+      "coordSource": "Nominatim"
+    },
+    "guijie": {
+      "sourceNote": "小红书 r028（Guijie: Spicy crayfish, crab, grilled fish, 24/7 营业）",
+      "coordSource": "Nominatim"
+    },
+    "xingfu": {
+      "sourceNote": "小红书 r025（幸福大街本地早市：菜团子/羊杂汤/猪肉玉米饺/凉皮/煎饼，¥20 吃饱，13点前收摊，105赞英文笔记）",
+      "coordSource": "Nominatim（街道点；市场位置以现场为准）"
+    },
+    "wangfujing": {
+      "sourceNote": "小红书 r069（吉祥大戏院《秦琼卖马》《朱砂痣》带俄罗斯朋友实测）、r070（出现中英双语字幕场次）、r028（王府井小吃街：糖葫芦/煎饼/烤蝎子）",
+      "coordSource": "derived: 步行街中段"
+    },
+    "qingsong": {
+      "sourceNote": "小红书 r054（青松别院：黑猪肉炸酱面/安格斯牛肋条炸酱面/京院酥不腻烤鸭蘸白糖/炙子沙葱烤肥牛/老北京爆肚/虾汤柴火豆腐，389赞）",
+      "coordSource": "area: 日坛公园（Nominatim）；到店用高德搜店名确认"
+    },
+    "art798": {
+      "sourceNote": "小红书 r085（核心路线 2163赞）、r082（下午citywalk 3356赞：机位+小店+吃）、r083（1小时极速线+机场区位）、r086（免费展）",
+      "coordSource": "Nominatim"
+    },
+    "olympic": {
+      "sourceNote": "小红书 r017（Bird's Nest/Water Cube 步行5分钟+长城日收尾）、r044（行程位置）",
+      "coordSource": "Nominatim（国家体育场）"
+    },
+    "natmuseum": {
+      "sourceNote": "小红书 r046（免费/7天前17:00放票/周一闭馆）、r044（Day1 与天安门同日）、r013（国家博物馆预约同流程）",
+      "coordSource": "Nominatim"
+    },
+    "xishiku": {
+      "sourceNote": "小红书 r010（免费小众清单：西什库教堂=北京最美教堂/彩窗/周末圣歌，1.6万赞）",
+      "coordSource": "estimate: 西什库大街33号（Nominatim 未收录，导航以高德搜索为准）"
+    }
+  },
+  "built_at": "2026-06-10T16:05:20.142Z",
+  "asset_version": "bjv7"
+}
