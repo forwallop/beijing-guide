@@ -1,19 +1,26 @@
 {
-  "provider": "github-pages",
-  "public_url": "https://forwallop.github.io/beijing-guide/",
+  "provider": "netlify (primary) + github-pages (backup)",
+  "public_url": "https://beijing-guide.netlify.app",
   "repo": "forwallop/beijing-guide",
   "account": "forwallop（原 quanquanluo0309-lang 已改名；gh CLI 本机已授权）",
   "deploy_command": "node build.mjs <version> && cd site && git add -A && git commit -m update && git push",
   "pages_config": "main branch / root, .nojekyll",
-  "asset_version": "bjv8",
+  "asset_version": "bjv9",
   "deployed_at": "2026-06-11",
   "superseded_urls": [
     "https://beijing-foreigner-guide.surge.sh（2026-06-11 注销）",
     "https://quanquanluo0309-lang.github.io/beijing-guide/（用户名更改后失效，github.io 不跨用户名重定向）"
   ],
-  "notes": "PageDrop 宕机期间用户选定 GitHub Pages。github.io 大陆裸网时好时坏：外国朋友用漫游流量不受影响，自己访问不稳时挂代理。PageDrop 恢复后可迁回（zip 在本目录）。",
+  "notes": "用户选定 Netlify 为主托管（域名不含用户名）；GitHub Pages 同内容备份。修改流程：node build.mjs <ver> → netlify deploy（上行）+ git push（备份）。netlify.app 大陆裸网可能不稳，外国访客漫游不受影响。",
   "languages": {
-    "en": "https://forwallop.github.io/beijing-guide/（英文主站，地名双语）",
-    "zh": "https://forwallop.github.io/beijing-guide/zh/（中文版）"
-  }
+    "en": "https://beijing-guide.netlify.app/",
+    "zh": "https://beijing-guide.netlify.app/zh/"
+  },
+  "netlify": {
+    "site_id": "550e7de3-5309-463b-a1b6-95c439201469",
+    "team": "quanquanluo0309",
+    "deploy": "npx netlify-cli deploy --prod --dir site --site 550e7de3-5309-463b-a1b6-95c439201469",
+    "auth": "netlify-cli 已在本机授权（~/.config/netlify）"
+  },
+  "github_pages_backup": "https://forwallop.github.io/beijing-guide/"
 }
