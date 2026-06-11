@@ -334,7 +334,7 @@
     const validPoints = points.filter((point) => isFiniteNumber(point.lat) && isFiniteNumber(point.lon));
     const center = validPoints[0] || guide.anchor || { lat: 0, lon: 0 };
     map = L.map(containerId, { scrollWheelZoom: true, zoomControl: true }).setView([center.lat, center.lon], 13);
-    const tileLayer = L.tileLayer("https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}", {
+    const tileLayer = L.tileLayer("https://webrd0{s}.is.autonavi.com/appmaptile?lang=en&size=1&scale=1&style=8&x={x}&y={y}&z={z}", {
       maxZoom: 18,
       subdomains: ["1", "2", "3", "4"],
       attribution: "&copy; \u9ad8\u5fb7\u5730\u56fe"
